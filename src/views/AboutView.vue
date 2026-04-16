@@ -1,15 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <!-- 目前 About 页面与主页共用同一套内容区块，避免路由缺失导致构建报错 -->
+  <HomeView />
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+<script setup lang="ts">
+import HomeView from './HomeView.vue'
+</script>
+
+<style scoped>
+/* 空 */
 </style>
+
