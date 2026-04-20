@@ -61,13 +61,7 @@
         </button>
 
         <div class="video-player-wrap">
-          <video
-            ref="videoRef"
-            class="video-player"
-            controls
-            autoplay
-            playsinline
-          >
+          <video ref="videoRef" class="video-player" controls autoplay playsinline>
             <source :src="videoSrc" type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
@@ -128,19 +122,17 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .service-section {
-  --overlay-offset: 165px;
   background: #ffffff;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 120px;
+  padding-top: 120px;
 }
 
 .service-hero {
   width: 100%;
-  background: #f2f2f2;
-  height: var(--hero-h, 460px);
+  height: calc(100vh - 120px);
+  min-height: 500px;
   overflow: hidden;
-  position: sticky;
-  top: 80px;
-  z-index: 0;
+  position: relative;
 }
 
 .service-hero-image {
@@ -148,14 +140,14 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
 }
 
 .service-content {
   position: relative;
-  z-index: 1;
-  margin-top: calc(-1 * var(--overlay-offset, 120px));
   background: #ffffff;
+  margin-top: -80px;
+  padding-top: 80px;
   padding-bottom: 56px;
 }
 

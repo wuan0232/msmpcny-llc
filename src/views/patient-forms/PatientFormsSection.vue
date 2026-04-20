@@ -85,13 +85,16 @@ const props = withDefaults(
 
 const { sectionId, heroImageSrc, videoSrc } = props
 
+
 const formLinks = [
-  { label: 'New Patient Forms', href: 'https://www.msmpcny.com/patient-forms' },
-  { label: 'New Patient Consent Forms', href: 'https://www.msmpcny.com/patient-forms' },
-  { label: 'Patient Information Form', href: 'https://www.msmpcny.com/patient-forms' },
-  { label: 'Patient History Form', href: 'https://www.msmpcny.com/patient-forms' },
-  { label: 'Patient Pain Diagram', href: 'https://www.msmpcny.com/patient-forms' },
+  { label: 'New Patient Forms', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/New%20Patient%20Form.pdf' },
+  { label: 'New Patient Consent Forms', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/3-8-19%20Patient%20consent%20form.pdf' },
+  { label: 'Patient Information Form', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20Information%20Form.pdf' },
+  { label: 'Patient History Form', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20History%20Form.pdf' },
+  { label: 'Patient Pain Diagram', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20Pain%20Diagram.pdf' }
 ]
+
+
 
 const isOpen = ref(false)
 const videoRef = ref<HTMLVideoElement | null>(null)

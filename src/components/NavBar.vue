@@ -64,14 +64,14 @@ const menuItems = ref<MenuItem[]>([
       { id: 21, name: 'Procedures', link: '/procedures' },
       { id: 22, name: 'Prolotherapy', link: '/services' },
       { id: 23, name: 'Prolozone', link: '/prolozone' },
-      { id: 24, name: 'Platelet Rich Plasma', link: '#sports' },
-      { id: 25, name: 'Sacroiliac Stabilization', link: '#services' },
-      { id: 26, name: 'Perineural Injections', link: '#services' }
+      { id: 24, name: 'Platelet Rich Plasma', link: '/platelet-rich-plasma' },
+      { id: 25, name: 'Sacroiliac Stabilization', link: '/sacroiliac-stabilization' },
+      { id: 26, name: 'Perineural Injections', link: '/perineural-injections' }
     ]
   },
   { id: 3, name: 'Patient Forms', link: '/patient-forms' },
   { id: 4, name: 'About', link: '#about' },
-  { id: 5, name: 'Contact', link: '#contact' }
+  { id: 5, name: 'Contact', link: '/contact' }
 ])
 
 // 根据当前路由设置激活状态
@@ -126,8 +126,8 @@ onUnmounted(() => {
   padding: 0 34px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 80px;
+  justify-content: center;
+  height: 120px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -139,7 +139,7 @@ onUnmounted(() => {
 }
 
 .brand-img {
-  height: 42px;
+  height: 45px;
   width: auto;
   display: block;
 }
@@ -148,8 +148,9 @@ onUnmounted(() => {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 6px;
+  margin-left: 40px;
 }
 
 /* 品牌名称 */
@@ -162,12 +163,72 @@ onUnmounted(() => {
   font-family: 'Georgia', serif;
 }
 
-/* 右侧整体 */
-.nav-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
+/* 平板设备 */
+@media (max-width: 900px) {
+  .nav-inner {
+    height: auto;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-img {
+    height: 38px;
+  }
+
+  .nav-right {
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  .dropdown {
+    min-width: 260px;
+  }
+}
+
+/* 移动设备 */
+@media (max-width: 600px) {
+  .nav-inner {
+    padding: 12px 16px;
+  }
+
+  .brand-img {
+    height: 40px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .phone {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 6px 12px;
+  }
+
+  .nav-links > li > a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
 }
 
 /* 联系信息行 */
@@ -180,12 +241,12 @@ onUnmounted(() => {
 
 .location {
   color: #aaaaaa;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .phone {
   color: #ffffff;
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 800;
   text-decoration: none;
   letter-spacing: 0.4px;
@@ -213,7 +274,7 @@ onUnmounted(() => {
   display: block;
   color: #cccccc;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 16px;
   padding: 5px 2px 8px;
   transition: color 0.2s;
   letter-spacing: 0.2px;
@@ -290,7 +351,7 @@ onUnmounted(() => {
   color: #cccccc;
   text-decoration: none;
   padding: 18px 28px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.25;
   letter-spacing: 0.2px;
   white-space: nowrap;

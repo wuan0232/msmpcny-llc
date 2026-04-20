@@ -1,61 +1,59 @@
 <template>
-  <div class="prolozone-wrapper">
+  <div class="si-wrapper">
     <NavBar />
 
-    <main class="prolozone-main">
-      <section id="prolozone" class="prolozone-section">
-        <div class="prolozone-hero">
+    <main class="si-main">
+      <section id="sacroiliac-stabilization" class="si-section">
+        <div class="si-hero">
           <img
-            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/prolozone-hero-2880w.jpg"
-            alt="Prolozone hero"
-            class="prolozone-hero-image"
+            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/sacroiliac-stabilization-hero-2880w.jpg"
+            alt="Sacroiliac stabilization hero"
+            class="si-hero-image"
           />
         </div>
 
-        <div class="prolozone-content">
-          <div class="prolozone-panel">
+        <div class="si-content">
+          <div class="si-panel">
             <div class="container">
-              <div class="prolozone-grid">
-                <div class="prolozone-copy">
-                  <h2 class="prolozone-title">Permanent Pain Treatments</h2>
-                  <p class="prolozone-body">
-                    Chronic pain can make your life very difficult to live with. Find the relief that you
-                    need when you trust Musculoskeletal Medicine PC to offer you Prolozone treatments.
-                    This permanent, non-surgical treatment is ideal for taking care of your chronic pain
-                    and aiding you in your recovery.
+              <div class="si-grid">
+                <div class="si-copy">
+                  <h2 class="si-title">Complete Sacroiliac Care</h2>
+                  <p class="si-body">
+                    Sacroiliac stabilization is a process that restores strength, stability, and functionality to the
+                    sacroiliac joint. The treatments that we offer at Musculoskeletal Medicine PC can help you restore
+                    proper biomechanics that can result in a net reduction of pain and improvement of function.
                   </p>
 
-                  <p class="prolozone-body">
-                    Find out more about our independent physician that has served patients in the area
-                    loyally since 2001.
+                  <p class="si-body">
+                    Find out more about our
+                    <a class="si-link" href="/about">independent physician</a>
+                    before you make an appointment for your therapy today.
                   </p>
 
-                  <h3 class="prolozone-subtitle">Tissue Injection Therapy</h3>
-                  <p class="prolozone-body">
-                    Prolozone is a connective tissue injection therapy involving an injection of
-                    collagen-producing substances and ozone gas that can help reconstruct damaged or
-                    weakened connective tissue. Make an appointment today to get relief from your chronic
-                    pain with our Prolozone treatments.
+                  <h3 class="si-subtitle">Improve Joint Function</h3>
+                  <p class="si-body">
+                    The treatments that we offer can restore proper biomechanics in order to help relieve your pain and
+                    improve the function of your joint. Start on the path towards better health and recovery with the
+                    assistance of our dedicated, compassionate care. Reduce pain with the aid of sacroiliac
+                    stabilization.
                   </p>
 
-                  <button type="button" class="prolozone-cta">
-                    Learn more about Prolozone
-                  </button>
+                  <button type="button" class="si-cta">Learn more about Sacroiliac Stabilization</button>
                 </div>
 
-                <div class="prolozone-side">
-                  <div class="prolozone-callout">
-                    Call 315-478-9710 to schedule your Prolozone treatments today.
+                <div class="si-side">
+                  <div class="si-callout">
+                    Call 315-478-9710 and make an appointment for sacroiliac stabilization.
                   </div>
 
-                  <div class="prolozone-video-wrap">
-                    <video class="prolozone-video" controls playsinline preload="metadata">
+                  <div class="si-video-wrap">
+                    <video class="si-video" controls playsinline preload="metadata">
                       <source src="/videos/musculoskeletal-medicine-gbjxb8zma-a03tk3.mp4" type="video/mp4" />
                       Your browser does not support HTML5 video.
                     </video>
                   </div>
 
-                  <button type="button" class="prolozone-caption-button" @click="openModal">
+                  <button type="button" class="si-caption-button" @click="openModal">
                     Click Here for Closed Captioning
                   </button>
                 </div>
@@ -69,7 +67,7 @@
     </main>
 
     <div v-if="isOpen" class="video-modal-backdrop" @click.self="closeModal">
-      <div class="video-modal" role="dialog" aria-modal="true" aria-label="Prolozone video">
+      <div class="video-modal" role="dialog" aria-modal="true" aria-label="Sacroiliac stabilization video">
         <button type="button" class="video-close" aria-label="Close video" @click="closeModal">×</button>
         <div class="video-player-wrap">
           <video ref="videoRef" class="video-player" controls autoplay playsinline>
@@ -115,26 +113,26 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.prolozone-wrapper {
+.si-wrapper {
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
   overflow-x: hidden;
 }
 
-.prolozone-main {
+.si-main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.prolozone-section {
+.si-section {
   background: #ffffff;
   scroll-margin-top: 120px;
   padding-top: 120px;
 }
 
-.prolozone-hero {
+.si-hero {
   width: 100%;
   height: calc(100vh - 120px);
   min-height: 500px;
@@ -142,7 +140,7 @@ onBeforeUnmount(() => {
   position: relative;
 }
 
-.prolozone-hero-image {
+.si-hero-image {
   width: 100%;
   height: 100%;
   display: block;
@@ -150,20 +148,20 @@ onBeforeUnmount(() => {
   object-position: center top;
 }
 
-.prolozone-content {
+.si-content {
   position: relative;
   background: #ffffff;
   margin-top: -80px;
   padding-top: 80px;
 }
 
-.prolozone-panel {
+.si-panel {
   width: 100%;
   background: #ffffff;
   padding-top: 34px;
 }
 
-.prolozone-grid {
+.si-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.75fr);
   gap: 36px;
@@ -171,31 +169,40 @@ onBeforeUnmount(() => {
   padding-bottom: 48px;
 }
 
-.prolozone-title {
+.si-title {
   margin: 0 0 16px;
   color: var(--brand-red);
   font-size: 52px;
   line-height: 1.08;
   font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.prolozone-subtitle {
+.si-subtitle {
   margin: 24px 0 12px;
   color: var(--brand-red);
   font-size: 44px;
   line-height: 1.12;
   font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.prolozone-body {
+.si-body {
   margin: 0 0 18px;
   color: #4a4a4a;
   font-size: 13px;
   line-height: 1.55;
 }
 
-.prolozone-cta {
-  margin-top: 8px;
+.si-link {
+  color: var(--brand-red);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.si-cta {
+  display: block;
+  margin: 8px auto 0;
   background: var(--brand-red);
   color: #ffffff;
   border: 0;
@@ -206,13 +213,13 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 
-.prolozone-side {
+.si-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.prolozone-callout {
+.si-callout {
   width: 100%;
   background: var(--brand-red);
   color: #ffffff;
@@ -224,18 +231,18 @@ onBeforeUnmount(() => {
   margin-bottom: 20px;
 }
 
-.prolozone-video-wrap {
+.si-video-wrap {
   width: 100%;
   background: #111111;
 }
 
-.prolozone-video {
+.si-video {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
 }
 
-.prolozone-caption-button {
+.si-caption-button {
   margin-top: 12px;
   width: 100%;
   max-width: 290px;
@@ -246,6 +253,7 @@ onBeforeUnmount(() => {
   padding: 10px 14px;
   font-size: 16px;
   font-weight: 700;
+  font-style: italic;
   cursor: pointer;
 }
 
@@ -291,42 +299,41 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 900px) {
-  .prolozone-section {
+  .si-section {
     --overlay-offset: 90px;
   }
 
-  .prolozone-grid {
+  .si-grid {
     grid-template-columns: 1fr;
   }
 
-  .prolozone-title {
+  .si-title {
     font-size: 34px;
   }
 
-  .prolozone-subtitle {
+  .si-subtitle {
     font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .prolozone-section {
+  .si-section {
     --overlay-offset: 58px;
     scroll-margin-top: 72px;
   }
 
-  .prolozone-hero {
+  .si-hero {
     top: 72px;
     height: calc(100vh - 72px);
     min-height: 420px;
   }
 
-  .prolozone-callout {
+  .si-callout {
     font-size: 18px;
   }
 
-  .prolozone-caption-button {
+  .si-caption-button {
     font-size: 14px;
   }
 }
 </style>
-

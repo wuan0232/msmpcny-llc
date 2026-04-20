@@ -22,12 +22,32 @@ const router = createRouter({
     {
       path: '/procedures',
       name: 'procedures',
-      component: () => import('../views/services/ProcedureView.vue'),
+      component: () => import('../views/service/ProceduresView.vue'),
     },
     {
       path: '/prolozone',
       name: 'prolozone',
       component: () => import('../views/service/ProloZoneView.vue'),
+    },
+    {
+      path: '/platelet-rich-plasma',
+      name: 'platelet-rich-plasma',
+      component: () => import('../views/service/PrpSection.vue'),
+    },
+    {
+      path: '/sacroiliac-stabilization',
+      name: 'sacroiliac-stabilization',
+      component: () => import('../views/service/SIStabilizationSection.vue'),
+    },
+    {
+      path: '/perineural-injections',
+      name: 'perineural-injections',
+      component: () => import('../views/service/PerineuralInjectionSection.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/contact/ContactSection.vue'),
     },
     {
       path: '/about',

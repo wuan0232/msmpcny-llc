@@ -1,61 +1,58 @@
 <template>
-  <div class="prolozone-wrapper">
+  <div class="pn-wrapper">
     <NavBar />
 
-    <main class="prolozone-main">
-      <section id="prolozone" class="prolozone-section">
-        <div class="prolozone-hero">
+    <main class="pn-main">
+      <section id="perineural-injections" class="pn-section">
+        <div class="pn-hero">
           <img
-            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/prolozone-hero-2880w.jpg"
-            alt="Prolozone hero"
-            class="prolozone-hero-image"
+            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/epidural-injections-hero-2880w.jpg"
+            alt="Perineural injections hero"
+            class="pn-hero-image"
           />
         </div>
 
-        <div class="prolozone-content">
-          <div class="prolozone-panel">
+        <div class="pn-content">
+          <div class="pn-panel">
             <div class="container">
-              <div class="prolozone-grid">
-                <div class="prolozone-copy">
-                  <h2 class="prolozone-title">Permanent Pain Treatments</h2>
-                  <p class="prolozone-body">
-                    Chronic pain can make your life very difficult to live with. Find the relief that you
-                    need when you trust Musculoskeletal Medicine PC to offer you Prolozone treatments.
-                    This permanent, non-surgical treatment is ideal for taking care of your chronic pain
-                    and aiding you in your recovery.
+              <div class="pn-grid">
+                <div class="pn-copy">
+                  <h2 class="pn-title">Effective Perineural Injections</h2>
+                  <p class="pn-body">
+                    The perineural injections that we offer are a trusted, effective treatment option for both lower back
+                    pain and leg pain. Musculoskeletal Medicine PC has served the local community loyally since 2001.
+                    Make an appointment with our team of compassionate, dedicated care professionals today.
                   </p>
 
-                  <p class="prolozone-body">
-                    Find out more about our independent physician that has served patients in the area
-                    loyally since 2001.
+                  <p class="pn-body">
+                    Make the right choice in clinics for your pain relief. Find out more about our
+                    <a class="pn-link" href="/about">independent physician</a>
+                    before you make an appointment with us today.
                   </p>
 
-                  <h3 class="prolozone-subtitle">Tissue Injection Therapy</h3>
-                  <p class="prolozone-body">
-                    Prolozone is a connective tissue injection therapy involving an injection of
-                    collagen-producing substances and ozone gas that can help reconstruct damaged or
-                    weakened connective tissue. Make an appointment today to get relief from your chronic
-                    pain with our Prolozone treatments.
+                  <h3 class="pn-subtitle">Trigger Point Injections</h3>
+                  <p class="pn-body">
+                    This commonly practiced pain interventional technique is used in the treatment of painful areas of
+                    muscle or knots of muscles that form when the muscles do not relax. Turn to the professionals to
+                    help you with any and all of your treatment and recovery needs today.
                   </p>
 
-                  <button type="button" class="prolozone-cta">
-                    Learn more about Prolozone
-                  </button>
+                  <button type="button" class="pn-cta">Learn more about Perineural Injections</button>
                 </div>
 
-                <div class="prolozone-side">
-                  <div class="prolozone-callout">
-                    Call 315-478-9710 to schedule your Prolozone treatments today.
+                <div class="pn-side">
+                  <div class="pn-callout">
+                    Call 315-478-9710 to schedule perineural injections with us.
                   </div>
 
-                  <div class="prolozone-video-wrap">
-                    <video class="prolozone-video" controls playsinline preload="metadata">
+                  <div class="pn-video-wrap">
+                    <video class="pn-video" controls playsinline preload="metadata">
                       <source src="/videos/musculoskeletal-medicine-gbjxb8zma-a03tk3.mp4" type="video/mp4" />
                       Your browser does not support HTML5 video.
                     </video>
                   </div>
 
-                  <button type="button" class="prolozone-caption-button" @click="openModal">
+                  <button type="button" class="pn-caption-button" @click="openModal">
                     Click Here for Closed Captioning
                   </button>
                 </div>
@@ -69,7 +66,7 @@
     </main>
 
     <div v-if="isOpen" class="video-modal-backdrop" @click.self="closeModal">
-      <div class="video-modal" role="dialog" aria-modal="true" aria-label="Prolozone video">
+      <div class="video-modal" role="dialog" aria-modal="true" aria-label="Perineural injections video">
         <button type="button" class="video-close" aria-label="Close video" @click="closeModal">×</button>
         <div class="video-player-wrap">
           <video ref="videoRef" class="video-player" controls autoplay playsinline>
@@ -115,26 +112,26 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.prolozone-wrapper {
+.pn-wrapper {
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
   overflow-x: hidden;
 }
 
-.prolozone-main {
+.pn-main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.prolozone-section {
+.pn-section {
   background: #ffffff;
   scroll-margin-top: 120px;
   padding-top: 120px;
 }
 
-.prolozone-hero {
+.pn-hero {
   width: 100%;
   height: calc(100vh - 120px);
   min-height: 500px;
@@ -142,7 +139,7 @@ onBeforeUnmount(() => {
   position: relative;
 }
 
-.prolozone-hero-image {
+.pn-hero-image {
   width: 100%;
   height: 100%;
   display: block;
@@ -150,20 +147,20 @@ onBeforeUnmount(() => {
   object-position: center top;
 }
 
-.prolozone-content {
+.pn-content {
   position: relative;
   background: #ffffff;
   margin-top: -80px;
   padding-top: 80px;
 }
 
-.prolozone-panel {
+.pn-panel {
   width: 100%;
   background: #ffffff;
   padding-top: 34px;
 }
 
-.prolozone-grid {
+.pn-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.75fr);
   gap: 36px;
@@ -171,31 +168,40 @@ onBeforeUnmount(() => {
   padding-bottom: 48px;
 }
 
-.prolozone-title {
+.pn-title {
   margin: 0 0 16px;
   color: var(--brand-red);
   font-size: 52px;
   line-height: 1.08;
   font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.prolozone-subtitle {
+.pn-subtitle {
   margin: 24px 0 12px;
   color: var(--brand-red);
   font-size: 44px;
   line-height: 1.12;
   font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.prolozone-body {
+.pn-body {
   margin: 0 0 18px;
   color: #4a4a4a;
   font-size: 13px;
   line-height: 1.55;
 }
 
-.prolozone-cta {
-  margin-top: 8px;
+.pn-link {
+  color: var(--brand-red);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.pn-cta {
+  display: block;
+  margin: 8px auto 0;
   background: var(--brand-red);
   color: #ffffff;
   border: 0;
@@ -206,13 +212,13 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 
-.prolozone-side {
+.pn-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.prolozone-callout {
+.pn-callout {
   width: 100%;
   background: var(--brand-red);
   color: #ffffff;
@@ -224,18 +230,18 @@ onBeforeUnmount(() => {
   margin-bottom: 20px;
 }
 
-.prolozone-video-wrap {
+.pn-video-wrap {
   width: 100%;
   background: #111111;
 }
 
-.prolozone-video {
+.pn-video {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
 }
 
-.prolozone-caption-button {
+.pn-caption-button {
   margin-top: 12px;
   width: 100%;
   max-width: 290px;
@@ -246,6 +252,7 @@ onBeforeUnmount(() => {
   padding: 10px 14px;
   font-size: 16px;
   font-weight: 700;
+  font-style: italic;
   cursor: pointer;
 }
 
@@ -291,42 +298,41 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 900px) {
-  .prolozone-section {
+  .pn-section {
     --overlay-offset: 90px;
   }
 
-  .prolozone-grid {
+  .pn-grid {
     grid-template-columns: 1fr;
   }
 
-  .prolozone-title {
+  .pn-title {
     font-size: 34px;
   }
 
-  .prolozone-subtitle {
+  .pn-subtitle {
     font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .prolozone-section {
+  .pn-section {
     --overlay-offset: 58px;
     scroll-margin-top: 72px;
   }
 
-  .prolozone-hero {
+  .pn-hero {
     top: 72px;
     height: calc(100vh - 72px);
     min-height: 420px;
   }
 
-  .prolozone-callout {
+  .pn-callout {
     font-size: 18px;
   }
 
-  .prolozone-caption-button {
+  .pn-caption-button {
     font-size: 14px;
   }
 }
 </style>
-

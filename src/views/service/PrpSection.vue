@@ -1,61 +1,59 @@
 <template>
-  <div class="prolozone-wrapper">
+  <div class="prp-wrapper">
     <NavBar />
 
-    <main class="prolozone-main">
-      <section id="prolozone" class="prolozone-section">
-        <div class="prolozone-hero">
+    <main class="prp-main">
+      <section id="prp" class="prp-section">
+        <div class="prp-hero">
           <img
-            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/prolozone-hero-2880w.jpg"
-            alt="Prolozone hero"
-            class="prolozone-hero-image"
+            src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/platelet-rich-plasma-hero-2880w.jpg"
+            alt="Platelet rich plasma hero"
+            class="prp-hero-image"
           />
         </div>
 
-        <div class="prolozone-content">
-          <div class="prolozone-panel">
+        <div class="prp-content">
+          <div class="prp-panel">
             <div class="container">
-              <div class="prolozone-grid">
-                <div class="prolozone-copy">
-                  <h2 class="prolozone-title">Permanent Pain Treatments</h2>
-                  <p class="prolozone-body">
-                    Chronic pain can make your life very difficult to live with. Find the relief that you
-                    need when you trust Musculoskeletal Medicine PC to offer you Prolozone treatments.
-                    This permanent, non-surgical treatment is ideal for taking care of your chronic pain
-                    and aiding you in your recovery.
+              <div class="prp-grid">
+                <div class="prp-copy">
+                  <h2 class="prp-title">Regenerative Healing</h2>
+                  <p class="prp-body">
+                    Musculoskeletal Medicine PC offers a wide range of non-operative, non-surgical pain relief
+                    solutions, including PRP or Platelet-Rich Plasma treatments. This non-steroidal alternative
+                    medical treatment relieves pain by naturally promoting the long-lasting healing of
+                    musculoskeletal conditions.
                   </p>
 
-                  <p class="prolozone-body">
-                    Find out more about our independent physician that has served patients in the area
-                    loyally since 2001.
+                  <p class="prp-body">
+                    Find out more about our
+                    <a class="prp-link" href="/about">independent physician</a>
+                    before making an appointment with us today.
                   </p>
 
-                  <h3 class="prolozone-subtitle">Tissue Injection Therapy</h3>
-                  <p class="prolozone-body">
-                    Prolozone is a connective tissue injection therapy involving an injection of
-                    collagen-producing substances and ozone gas that can help reconstruct damaged or
-                    weakened connective tissue. Make an appointment today to get relief from your chronic
-                    pain with our Prolozone treatments.
+                  <h3 class="prp-subtitle">Treatments Performed With Visualization</h3>
+                  <p class="prp-body">
+                    Let our treatments help you get back on your feet again through your body's natural healing
+                    process. We utilize ultrasounds and fluoroscopy to get an idea of how the treatment is taking
+                    effect, so you can rest assured that the treatments you receive will work. Visit us today!
                   </p>
 
-                  <button type="button" class="prolozone-cta">
-                    Learn more about Prolozone
-                  </button>
+                  <button type="button" class="prp-cta">Learn more about Platelet Rich Plasma</button>
                 </div>
 
-                <div class="prolozone-side">
-                  <div class="prolozone-callout">
-                    Call 315-478-9710 to schedule your Prolozone treatments today.
+                <div class="prp-side">
+                  <div class="prp-callout">
+                    Call 315-478-9710 to schedule your Platelet-Rich Plasma treatments today.
                   </div>
 
-                  <div class="prolozone-video-wrap">
-                    <video class="prolozone-video" controls playsinline preload="metadata">
+                  <div class="prp-video-wrap">
+                    <video class="prp-video" controls playsinline preload="metadata">
                       <source src="/videos/musculoskeletal-medicine-gbjxb8zma-a03tk3.mp4" type="video/mp4" />
                       Your browser does not support HTML5 video.
                     </video>
                   </div>
 
-                  <button type="button" class="prolozone-caption-button" @click="openModal">
+                  <button type="button" class="prp-caption-button" @click="openModal">
                     Click Here for Closed Captioning
                   </button>
                 </div>
@@ -69,7 +67,7 @@
     </main>
 
     <div v-if="isOpen" class="video-modal-backdrop" @click.self="closeModal">
-      <div class="video-modal" role="dialog" aria-modal="true" aria-label="Prolozone video">
+      <div class="video-modal" role="dialog" aria-modal="true" aria-label="PRP video">
         <button type="button" class="video-close" aria-label="Close video" @click="closeModal">×</button>
         <div class="video-player-wrap">
           <video ref="videoRef" class="video-player" controls autoplay playsinline>
@@ -115,26 +113,26 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.prolozone-wrapper {
+.prp-wrapper {
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
   overflow-x: hidden;
 }
 
-.prolozone-main {
+.prp-main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.prolozone-section {
+.prp-section {
   background: #ffffff;
   scroll-margin-top: 120px;
   padding-top: 120px;
 }
 
-.prolozone-hero {
+.prp-hero {
   width: 100%;
   height: calc(100vh - 120px);
   min-height: 500px;
@@ -142,7 +140,7 @@ onBeforeUnmount(() => {
   position: relative;
 }
 
-.prolozone-hero-image {
+.prp-hero-image {
   width: 100%;
   height: 100%;
   display: block;
@@ -150,20 +148,20 @@ onBeforeUnmount(() => {
   object-position: center top;
 }
 
-.prolozone-content {
+.prp-content {
   position: relative;
   background: #ffffff;
   margin-top: -80px;
   padding-top: 80px;
 }
 
-.prolozone-panel {
+.prp-panel {
   width: 100%;
   background: #ffffff;
   padding-top: 34px;
 }
 
-.prolozone-grid {
+.prp-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.75fr);
   gap: 36px;
@@ -171,7 +169,7 @@ onBeforeUnmount(() => {
   padding-bottom: 48px;
 }
 
-.prolozone-title {
+.prp-title {
   margin: 0 0 16px;
   color: var(--brand-red);
   font-size: 52px;
@@ -179,7 +177,7 @@ onBeforeUnmount(() => {
   font-weight: 800;
 }
 
-.prolozone-subtitle {
+.prp-subtitle {
   margin: 24px 0 12px;
   color: var(--brand-red);
   font-size: 44px;
@@ -187,14 +185,20 @@ onBeforeUnmount(() => {
   font-weight: 800;
 }
 
-.prolozone-body {
+.prp-body {
   margin: 0 0 18px;
   color: #4a4a4a;
   font-size: 13px;
   line-height: 1.55;
 }
 
-.prolozone-cta {
+.prp-link {
+  color: var(--brand-red);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.prp-cta {
   margin-top: 8px;
   background: var(--brand-red);
   color: #ffffff;
@@ -206,13 +210,13 @@ onBeforeUnmount(() => {
   cursor: pointer;
 }
 
-.prolozone-side {
+.prp-side {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.prolozone-callout {
+.prp-callout {
   width: 100%;
   background: var(--brand-red);
   color: #ffffff;
@@ -224,18 +228,18 @@ onBeforeUnmount(() => {
   margin-bottom: 20px;
 }
 
-.prolozone-video-wrap {
+.prp-video-wrap {
   width: 100%;
   background: #111111;
 }
 
-.prolozone-video {
+.prp-video {
   width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
 }
 
-.prolozone-caption-button {
+.prp-caption-button {
   margin-top: 12px;
   width: 100%;
   max-width: 290px;
@@ -246,6 +250,7 @@ onBeforeUnmount(() => {
   padding: 10px 14px;
   font-size: 16px;
   font-weight: 700;
+  font-style: italic;
   cursor: pointer;
 }
 
@@ -291,42 +296,41 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 900px) {
-  .prolozone-section {
+  .prp-section {
     --overlay-offset: 90px;
   }
 
-  .prolozone-grid {
+  .prp-grid {
     grid-template-columns: 1fr;
   }
 
-  .prolozone-title {
+  .prp-title {
     font-size: 34px;
   }
 
-  .prolozone-subtitle {
+  .prp-subtitle {
     font-size: 28px;
   }
 }
 
 @media (max-width: 768px) {
-  .prolozone-section {
+  .prp-section {
     --overlay-offset: 58px;
     scroll-margin-top: 72px;
   }
 
-  .prolozone-hero {
+  .prp-hero {
     top: 72px;
     height: calc(100vh - 72px);
     min-height: 420px;
   }
 
-  .prolozone-callout {
+  .prp-callout {
     font-size: 18px;
   }
 
-  .prolozone-caption-button {
+  .prp-caption-button {
     font-size: 14px;
   }
 }
 </style>
-

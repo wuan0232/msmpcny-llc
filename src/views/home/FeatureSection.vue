@@ -132,14 +132,58 @@ const props = withDefaults(
   text-align: center;
 }
 
+/* 平板设备 */
 @media (max-width: 900px) {
+  .feature-section {
+    padding: 40px 0;
+  }
+
   .feature-row {
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
   }
 
   .feature-media {
     flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .feature-title {
+    font-size: 20px;
+  }
+
+  .feature-body {
+    font-size: 15px;
+  }
+}
+
+/* 移动设备 */
+@media (max-width: 600px) {
+  .feature-section {
+    padding: 32px 0;
+  }
+
+  .feature-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .feature-row {
+    gap: 20px;
+  }
+
+  .feature-body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .feature-button {
+    width: 100%;
+    min-width: auto;
+    padding: 12px 24px;
+  }
+
+  .feature-actions {
     width: 100%;
   }
 }

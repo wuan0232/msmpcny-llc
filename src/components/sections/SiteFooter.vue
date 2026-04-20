@@ -12,28 +12,18 @@
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-list">
             <li><a href="/">Home</a></li>
-            <li><a href="/#services">Services</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h3 class="footer-heading">Find Us</h3>
           <div class="map-wrap" aria-label="Map">
-            <iframe
-              class="map-frame"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              :src="mapEmbedUrl"
-            />
+            <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" :src="mapEmbedUrl" />
           </div>
-          <a
-            class="directions-button"
-            :href="directionsUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="directions-button" :href="directionsUrl" target="_blank" rel="noopener noreferrer">
             Get Directions
           </a>
         </div>
@@ -48,11 +38,9 @@
           </div>
           <a class="footer-contact-phone" href="tel:3154789710">315-478-9710</a>
 
-          <img
-            class="payment-image"
+          <img class="payment-image"
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/credit-card-logos-1920w.jpg"
-            alt="Visa, MasterCard, Discover, Cash and Personal Check accepted"
-          />
+            alt="Visa, MasterCard, Discover, Cash and Personal Check accepted" />
         </div>
       </div>
 
@@ -83,7 +71,7 @@ const props = defineProps<{ sectionId?: string }>()
 
 const { sectionId } = props
 
-const address = 'Musculoskeletal Medicine, P.C., 475 Irving Avenue, Suite 402, Syracuse, NY 13210'
+const address = '475 Irving Ave, Syracuse, NY 13210'
 const addressEncoded = encodeURIComponent(address)
 
 // 谷歌地图展示/路线的链接（点击按钮会新开标签页展示“到达该地址”的路线）
@@ -254,4 +242,3 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   }
 }
 </style>
-

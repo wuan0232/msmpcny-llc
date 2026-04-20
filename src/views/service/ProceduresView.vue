@@ -91,7 +91,7 @@ const openModal = async () => {
   try {
     await videoRef.value?.play()
   } catch {
-    // autoplay may be blocked by browser
+    // Autoplay may be blocked by browser policy.
   }
 }
 
@@ -124,49 +124,45 @@ onBeforeUnmount(() => {
 }
 
 .procedures-section {
-  --overlay-offset: 140px;
-  width: 100%;
   background: #ffffff;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 120px;
+  padding-top: 120px;
 }
 
 .procedures-hero {
   width: 100%;
-  height: calc(100vh - 80px);
-  min-height: 560px;
+  height: calc(100vh - 120px);
+  min-height: 500px;
   overflow: hidden;
-  position: sticky;
-  top: 80px;
-  z-index: 0;
+  position: relative;
 }
 
 .procedures-hero-image {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
 }
 
 .procedures-content {
-  position: relative;
-  z-index: 1;
-  margin-top: calc(-1 * var(--overlay-offset));
   background: #ffffff;
+  position: relative;
+  margin-top: -80px;
+  padding-top: 80px;
 }
 
 .procedures-panel {
   width: 100%;
   background: #ffffff;
-  padding-top: 34px;
+  padding: 34px 0 48px;
 }
 
 .procedures-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.75fr);
-  gap: 36px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.72fr);
+  gap: 40px;
   align-items: start;
-  padding-bottom: 48px;
 }
 
 .procedures-title {
@@ -192,7 +188,7 @@ onBeforeUnmount(() => {
 .procedures-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .procedures-callout {
@@ -200,16 +196,16 @@ onBeforeUnmount(() => {
   background: var(--brand-red);
   color: #ffffff;
   text-align: center;
-  font-size: 20px;
-  line-height: 1.35;
-  font-weight: 700;
-  padding: 22px 18px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 800;
+  padding: 18px 18px;
 }
 
 .procedures-video-wrap {
   width: 100%;
   background: #111111;
+  margin-top: 26px;
 }
 
 .procedures-video {
@@ -221,91 +217,62 @@ onBeforeUnmount(() => {
 .procedures-caption-button {
   margin-top: 12px;
   width: 100%;
-  max-width: 290px;
+  max-width: 245px;
   background: var(--brand-red);
   color: #ffffff;
   border: 0;
-  border-radius: 3px;
-  padding: 10px 14px;
-  font-size: 16px;
-  font-weight: 700;
+  border-radius: 2px;
+  padding: 9px 12px;
+  font-size: 11px;
+  font-weight: 800;
   cursor: pointer;
 }
 
 .video-modal-backdrop {
   position: fixed;
-  inset: 0;
-  z-index: 2000;
-  display: grid;
-  place-items: center;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
 }
 
 .video-modal {
   position: relative;
-  width: min(100%, 980px);
+  width: 90%;
+  max-width: 800px;
   background: #ffffff;
-  border: 3px solid var(--brand-red);
-  border-radius: 14px;
-  padding: 16px;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .video-close {
   position: absolute;
-  top: 4px;
+  top: 10px;
   right: 10px;
-  border: 0;
-  background: transparent;
-  color: #222222;
-  font-size: 34px;
-  line-height: 1;
+  background: none;
+  border: none;
+  font-size: 32px;
   cursor: pointer;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-player-wrap {
-  background: #111111;
+  width: 100%;
 }
 
 .video-player {
   width: 100%;
   display: block;
-  aspect-ratio: 16 / 9;
-}
-
-@media (max-width: 900px) {
-  .procedures-section {
-    --overlay-offset: 90px;
-  }
-
-  .procedures-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .procedures-title {
-    font-size: 34px;
-  }
-}
-
-@media (max-width: 768px) {
-  .procedures-section {
-    --overlay-offset: 58px;
-    scroll-margin-top: 72px;
-  }
-
-  .procedures-hero {
-    top: 72px;
-    height: calc(100vh - 72px);
-    min-height: 420px;
-  }
-
-  .procedures-callout {
-    font-size: 18px;
-  }
-
-  .procedures-caption-button {
-    font-size: 14px;
-  }
+  border-radius: 4px;
 }
 </style>
-

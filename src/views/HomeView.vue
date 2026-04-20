@@ -94,6 +94,7 @@ import FeatureSection from './home/FeatureSection.vue'
   width: 100%;
   min-height: 100vh;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 .home-main {
@@ -101,5 +102,18 @@ import FeatureSection from './home/FeatureSection.vue'
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+/* 确保在小屏幕上内容不会溢出 */
+@media (max-width: 1240px) {
+  .home-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-wrapper {
+    min-height: auto;
+  }
 }
 </style>

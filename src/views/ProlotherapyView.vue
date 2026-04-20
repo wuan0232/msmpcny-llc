@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import NavBar from '../components/NavBar.vue'
-import ProlotherapySection from '../components/sections/ProlotherapySection.vue'
+import ProlotherapySection from './service/ProlotherapySection.vue'
 import SiteFooter from '../components/sections/SiteFooter.vue'
 </script>
 
