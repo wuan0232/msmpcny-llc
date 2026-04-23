@@ -70,7 +70,7 @@ const menuItems = ref<MenuItem[]>([
     ]
   },
   { id: 3, name: 'Patient Forms', link: '/patient-forms' },
-  { id: 4, name: 'About', link: '#about' },
+  { id: 4, name: 'About', link: '/about' },
   { id: 5, name: 'Contact', link: '/contact' }
 ])
 
