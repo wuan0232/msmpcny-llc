@@ -7,9 +7,7 @@
         <div class="si-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/sacroiliac-stabilization-hero-2880w.jpg"
-            alt="Sacroiliac stabilization hero"
-            class="si-hero-image"
-          />
+            alt="Sacroiliac stabilization hero" class="si-hero-image" />
         </div>
 
         <div class="si-content">
@@ -38,12 +36,19 @@
                     stabilization.
                   </p>
 
-                  <button type="button" class="si-cta">Learn more about Sacroiliac Stabilization</button>
+                  <a
+                    href="/pdf/Sacroiliac Joint Stabilization.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="si-cta"
+                  >
+                    Learn more about Sacroiliac Stabilization
+                  </a>
                 </div>
 
                 <div class="si-side">
                   <div class="si-callout">
-                    Call 315-478-9710 and make an appointment for sacroiliac stabilization.
+                    Call (929) 399-3134 and make an appointment for sacroiliac stabilization.
                   </div>
 
                   <div class="si-video-wrap">

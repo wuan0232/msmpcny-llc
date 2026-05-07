@@ -15,7 +15,7 @@
         <div class="feature-copy">
           <p class="feature-body">{{ body }}</p>
           <div class="feature-actions" :class="`actions-${buttonAlign}`">
-            <button type="button" class="feature-button">
+            <button type="button" class="feature-button" @click="$emit('button-click')">
               {{ buttonText }}
             </button>
           </div>
@@ -47,6 +47,10 @@ const props = withDefaults(
     buttonAlign: 'center',
   },
 )
+
+defineEmits<{
+  (e: 'button-click'): void
+}>()
 </script>
 
 <style scoped>

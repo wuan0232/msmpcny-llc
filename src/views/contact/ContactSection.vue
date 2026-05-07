@@ -4,52 +4,95 @@
 
     <main class="contact-main">
       <section id="contact" class="contact-section">
-        <div class="contact-map-wrap" aria-label="Map">
-          <iframe
-            class="contact-map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            :src="mapEmbedUrl"
-          />
-        </div>
-
         <div class="container contact-body">
           <h2 class="contact-title">Contact Us at Musculoskeletal Medicine, P.C. Today</h2>
 
-          <div class="contact-grid">
-            <div class="contact-col contact-address">
-              <div class="address-line">Musculoskeletal Medicine, P.C.</div>
-              <div class="address-line">475 Irving Avenue</div>
-              <div class="address-line">Suite 402</div>
-              <div class="address-line">Syracuse, NY 13210</div>
-              <div class="address-line">
-                <a class="phone-link" href="tel:3154789710">315-478-9710</a>
+          <div class="offices-layout">
+            <article class="office-panel">
+              <div class="contact-map-wrap" aria-label="Syracuse office map">
+                <ContactMap
+                  class="contact-map-inner"
+                  :address="syracuseOffice.address"
+                  :lat="syracuseOffice.lat"
+                  :lng="syracuseOffice.lng"
+                  :zoom="15"
+                />
               </div>
-              <div class="address-line">315-479-9145 (Fax)</div>
-            </div>
 
-            <div class="contact-col contact-hours">
-              <h3 class="col-heading">Business Hours</h3>
-              <div class="hours-row">
-                <span class="hours-day">Mon - Fri</span>
-                <span class="hours-time">8:00 am - 5:00 pm</span>
-              </div>
-              <div class="hours-row">
-                <span class="hours-day">Sat - Sun</span>
-                <span class="hours-time">Closed</span>
-              </div>
-            </div>
+              <div class="office-content">
+                <div class="contact-grid">
+                  <div class="contact-col contact-address">
+                    <div class="address-line address-heading">Musculoskeletal Medicine, P.C.</div>
+                    <div class="address-line">475 Irving Avenue</div>
+                    <div class="address-line">Suite 402</div>
+                    <div class="address-line">Syracuse, NY 13210</div>
+                    <div class="address-line">315-478-9710</div>
+                    <div class="address-line">315-479-9145 (Fax)</div>
+                  </div>
 
-            <div class="contact-col contact-action">
-              <a
-                class="directions-button"
-                :href="directionsUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Directions
-              </a>
-            </div>
+                  <div class="contact-col contact-hours">
+                    <h3 class="col-heading">Business Hours</h3>
+                    <div class="hours-row">
+                      <span class="hours-day">Mon - Fri</span>
+                      <span class="hours-time">8:00 am - 5:00 pm</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="hours-day">Sat - Sun</span>
+                      <span class="hours-time">Closed</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-col contact-action">
+                    <a class="directions-button" :href="syracuseOffice.directionsUrl" target="_blank" rel="noopener noreferrer">
+                      Get Directions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="office-panel">
+              <div class="contact-map-wrap" aria-label="New York City office map">
+                <ContactMap
+                  class="contact-map-inner"
+                  :address="nycOffice.address"
+                  :lat="nycOffice.lat"
+                  :lng="nycOffice.lng"
+                  :zoom="16"
+                />
+              </div>
+
+              <div class="office-content">
+                <div class="contact-grid">
+                  <div class="contact-col contact-address">
+                    <div class="address-line address-heading">New York City Office</div>
+                    <div class="address-line">42-65 Kissena Blvd, Flushing, NY</div>
+                    <div class="address-line address-spacer">
+                      <a class="email-link" href="mailto:NY@spineandneurosurgery.com">NY@spineandneurosurgery.com</a>
+                    </div>
+                    <div class="address-line">(929) 399-3134</div>
+                  </div>
+
+                  <div class="contact-col contact-hours">
+                    <h3 class="col-heading">Business Hours</h3>
+                    <div class="hours-row">
+                      <span class="hours-day">Monday - Friday</span>
+                      <span class="hours-time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="hours-day">Saturday - Sunday</span>
+                      <span class="hours-time">By appointment only</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-col contact-action">
+                    <a class="directions-button" :href="nycOffice.directionsUrl" target="_blank" rel="noopener noreferrer">
+                      Get Directions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -62,12 +105,30 @@
 <script setup lang="ts">
 import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
+import ContactMap from '../../components/ContactMap.vue'
+import {
+  NYC_CLINIC_ADDRESS,
+  NYC_CLINIC_LAT,
+  NYC_CLINIC_LNG,
+  SYRACUSE_CLINIC_ADDRESS,
+  SYRACUSE_CLINIC_LAT,
+  SYRACUSE_CLINIC_LNG,
+  googleMapsSearchUrl,
+} from '../../config/clinicLocation'
 
-const address = '475 Irving Ave, Syracuse, NY 13210'
-const addressEncoded = encodeURIComponent(address)
+const syracuseOffice = {
+  address: SYRACUSE_CLINIC_ADDRESS,
+  lat: SYRACUSE_CLINIC_LAT,
+  lng: SYRACUSE_CLINIC_LNG,
+  directionsUrl: googleMapsSearchUrl(SYRACUSE_CLINIC_ADDRESS),
+}
 
-const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${addressEncoded}`
-const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embed`
+const nycOffice = {
+  address: NYC_CLINIC_ADDRESS,
+  lat: NYC_CLINIC_LAT,
+  lng: NYC_CLINIC_LNG,
+  directionsUrl: googleMapsSearchUrl(NYC_CLINIC_ADDRESS),
+}
 </script>
 
 <style scoped>
@@ -80,25 +141,41 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 
 .contact-main {
   width: 100%;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 .contact-section {
   width: 100%;
   background: #ffffff;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 120px;
+}
+
+.offices-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.office-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  background: #ffffff;
 }
 
 .contact-map-wrap {
   width: 100%;
+  height: 300px;
   background: #e9e9e9;
   border-bottom: 1px solid #dddddd;
 }
 
-.contact-map {
+.contact-map-inner {
   display: block;
   width: 100%;
-  height: 380px;
+  height: 100%;
   border: 0;
 }
 
@@ -106,21 +183,29 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   padding: 34px 24px 48px;
 }
 
+.office-content {
+  display: flex;
+  flex: 1;
+  padding: 24px;
+}
+
 .contact-title {
   margin: 0 0 26px;
   color: var(--brand-red);
-  font-size: 34px;
+  font-size: 40px;
   line-height: 1.15;
   font-weight: 800;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 28px;
-  align-items: start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 22px;
+  max-width: none;
+  margin: 0;
 }
 
 .contact-col {
@@ -129,7 +214,7 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 
 .contact-address {
   color: #4a4a4a;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.65;
   font-weight: 600;
 }
@@ -138,13 +223,21 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   margin: 0;
 }
 
-.phone-link {
+.address-heading {
+  font-weight: 800;
+}
+
+.address-spacer {
+  margin-top: 10px;
+}
+
+.email-link {
   color: var(--brand-red);
   text-decoration: none;
   font-weight: 700;
 }
 
-.phone-link:hover {
+.email-link:hover {
   text-decoration: underline;
 }
 
@@ -160,10 +253,10 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   justify-content: space-between;
   gap: 14px;
   color: #4a4a4a;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.65;
   font-weight: 600;
-  max-width: 260px;
+  max-width: 100%;
 }
 
 .hours-day {
@@ -176,6 +269,7 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 
 .contact-action {
   display: flex;
+  margin-top: auto;
   justify-content: flex-start;
   align-items: center;
 }
@@ -186,12 +280,14 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   background: var(--brand-red);
   color: #ffffff;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 18px;
   text-decoration: none;
   border-radius: 3px;
   text-align: center;
-  min-width: 220px;
+  width: 100%;
+  min-width: 0;
   letter-spacing: 0.3px;
+  box-sizing: border-box;
 }
 
 .directions-button:hover {
@@ -199,6 +295,7 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 }
 
 @media (max-width: 900px) {
+  .offices-layout,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -221,8 +318,8 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
     width: 100%;
   }
 
-  .contact-map {
-    height: 260px;
+  .contact-map-wrap {
+    height: 280px;
   }
 }
 

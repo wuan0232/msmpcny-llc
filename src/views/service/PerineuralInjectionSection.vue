@@ -7,9 +7,7 @@
         <div class="pn-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/epidural-injections-hero-2880w.jpg"
-            alt="Perineural injections hero"
-            class="pn-hero-image"
-          />
+            alt="Perineural injections hero" class="pn-hero-image" />
         </div>
 
         <div class="pn-content">
@@ -19,7 +17,8 @@
                 <div class="pn-copy">
                   <h2 class="pn-title">Effective Perineural Injections</h2>
                   <p class="pn-body">
-                    The perineural injections that we offer are a trusted, effective treatment option for both lower back
+                    The perineural injections that we offer are a trusted, effective treatment option for both lower
+                    back
                     pain and leg pain. Musculoskeletal Medicine PC has served the local community loyally since 2001.
                     Make an appointment with our team of compassionate, dedicated care professionals today.
                   </p>
@@ -37,12 +36,19 @@
                     help you with any and all of your treatment and recovery needs today.
                   </p>
 
-                  <button type="button" class="pn-cta">Learn more about Perineural Injections</button>
+                  <a
+                    href="/pdf/Perineural Injection.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pn-cta"
+                  >
+                    Learn more about Perineural Injections
+                  </a>
                 </div>
 
                 <div class="pn-side">
                   <div class="pn-callout">
-                    Call 315-478-9710 to schedule perineural injections with us.
+                    Call (929) 399-3134 to schedule perineural injections with us.
                   </div>
 
                   <div class="pn-video-wrap">

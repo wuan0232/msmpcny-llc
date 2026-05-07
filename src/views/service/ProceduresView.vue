@@ -7,9 +7,7 @@
         <div class="procedures-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/Procedure-new-hero-2880w.png"
-            alt="Procedures hero"
-            class="procedures-hero-image"
-          />
+            alt="Procedures hero" class="procedures-hero-image" />
         </div>
 
         <div class="procedures-content">
@@ -19,20 +17,31 @@
                 <div class="procedures-copy">
                   <h2 class="procedures-title">Procedure List</h2>
                   <ul class="procedures-list">
-                    <li><strong>Joint Injections:</strong> Includes the use of C-Arm fluoroscopy and/or ultrasound guidance when necessary.</li>
+                    <li><strong>Joint Injections:</strong> Includes the use of C-Arm fluoroscopy and/or ultrasound
+                      guidance when necessary.</li>
                     <li><strong>Tendon, Ligament, and Trigger Point Injections.</strong></li>
-                    <li><strong>Prolotherapy:</strong> Injections into ligament and tendon attachments to promote connective tissue healing and strengthening.</li>
-                    <li><strong>Prolozone:</strong> Injections augmented with an oxygen and ozone mixture to promote healing of injured tissue.</li>
-                    <li><strong>Platelet Rich Plasma Injections:</strong> Derived from the patient's blood containing growth factors to promote healing.</li>
-                    <li><strong>Perineural Injections (Neuropathic Pain Treatment):</strong> Injections into subcutaneous nerves to reduce inflammation and pain. Lyftogt Technique.</li>
-                    <li><strong>Caudal Epidural and Lumbar Transforaminal Epidural Injections:</strong> Fluoroscopic guided including epidurogram when indicated.</li>
-                    <li><strong>Sacroiliac Joint and Ligament Injections:</strong> With the use of C-Arm fluoroscopy to reduce inflammation or to stabilize hypermobile S-I joints.</li>
+                    <li><strong>Prolotherapy:</strong> Injections into ligament and tendon attachments to promote
+                      connective tissue healing and strengthening.</li>
+                    <li><strong>Prolozone:</strong> Injections augmented with an oxygen and ozone mixture to promote
+                      healing of injured tissue.</li>
+                    <li><strong>Platelet Rich Plasma Injections:</strong> Derived from the patient's blood containing
+                      growth factors to promote healing.</li>
+                    <li><strong>Perineural Injections (Neuropathic Pain Treatment):</strong> Injections into
+                      subcutaneous nerves to reduce inflammation and pain. Lyftogt Technique.</li>
+                    <li><strong>Caudal Epidural and Lumbar Transforaminal Epidural Injections:</strong> Fluoroscopic
+                      guided including epidurogram when indicated.</li>
+                    <li><strong>Sacroiliac Joint and Ligament Injections:</strong> With the use of C-Arm fluoroscopy to
+                      reduce inflammation or to stabilize hypermobile S-I joints.</li>
                     <li><strong>Facet Injections (Cervical, Thoracic, and Lumbar):</strong> Fluoroscopic guided.</li>
-                    <li><strong>Conscious Sedation:</strong> To ease the pain of injection treatments. Continuous oximetry monitoring employed.</li>
+                    <li><strong>Conscious Sedation:</strong> To ease the pain of injection treatments. Continuous
+                      oximetry monitoring employed.</li>
                     <li><strong>Osteopathic Diagnostic and Manipulative Techniques.</strong></li>
-                    <li><strong>Acupuncture Methods:</strong> Limited to Percutaneous Electrical Stimulation (Craig Technique) and Intramuscular Stimulation (Chan Gunn Technique).</li>
-                    <li><strong>Diagnostic Ultrasound Exams:</strong> Specific imaging protocols for evaluating shoulder pathology and Carpal Tunnel Syndrome.</li>
-                    <li><strong>Carpal Tunnel Hydro Dissection:</strong> Ultrasound guided for treatment of Carpal Tunnel Syndrome.</li>
+                    <li><strong>Acupuncture Methods:</strong> Limited to Percutaneous Electrical Stimulation (Craig
+                      Technique) and Intramuscular Stimulation (Chan Gunn Technique).</li>
+                    <li><strong>Diagnostic Ultrasound Exams:</strong> Specific imaging protocols for evaluating shoulder
+                      pathology and Carpal Tunnel Syndrome.</li>
+                    <li><strong>Carpal Tunnel Hydro Dissection:</strong> Ultrasound guided for treatment of Carpal
+                      Tunnel Syndrome.</li>
                     <li><strong>Chiropractic Evaluation and Treatment.</strong></li>
                     <li><strong>Custom Orthotics:</strong> Utilizing the Foot Levelers System.</li>
                   </ul>
@@ -40,7 +49,7 @@
 
                 <div class="procedures-side">
                   <div class="procedures-callout">
-                    Call 315-478-9710 to schedule your Prolotherapy treatments today.
+                    Call (929) 399-3134 to schedule your Prolotherapy treatments today.
                   </div>
 
                   <div class="procedures-video-wrap">

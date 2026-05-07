@@ -13,7 +13,7 @@
               <p class="patient-forms-body">
                 Musculoskeletal Medicine, P.C. is an independent physician practice that has been serving
                 the local area since 2001. Below are our forms for new patients, you can call us at
-                <a href="tel:3154789710">315-478-9710</a> with any questions you may have.
+                <a href="tel:3154789710">(929) 399-3134</a> with any questions you may have.
               </p>
 
               <ul class="patient-forms-links">
@@ -27,7 +27,7 @@
 
             <div class="patient-forms-side">
               <div class="patient-callout">
-                Call 315-478-9710 to schedule your Prolotherapy treatments today.
+                Call (929) 399-3134 to schedule your Prolotherapy treatments today.
               </div>
 
               <div class="patient-video-wrap">
@@ -53,13 +53,7 @@
         </button>
 
         <div class="video-player-wrap">
-          <video
-            ref="videoRef"
-            class="video-player"
-            controls
-            autoplay
-            playsinline
-          >
+          <video ref="videoRef" class="video-player" controls autoplay playsinline>
             <source :src="videoSrc" type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
@@ -368,4 +362,3 @@ onBeforeUnmount(() => {
   }
 }
 </style>
-

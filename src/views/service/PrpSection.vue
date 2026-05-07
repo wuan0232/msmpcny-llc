@@ -7,9 +7,7 @@
         <div class="prp-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/platelet-rich-plasma-hero-2880w.jpg"
-            alt="Platelet rich plasma hero"
-            class="prp-hero-image"
-          />
+            alt="Platelet rich plasma hero" class="prp-hero-image" />
         </div>
 
         <div class="prp-content">
@@ -38,12 +36,19 @@
                     effect, so you can rest assured that the treatments you receive will work. Visit us today!
                   </p>
 
-                  <button type="button" class="prp-cta">Learn more about Platelet Rich Plasma</button>
+                  <a
+                    href="/pdf/Platelet Rich Plasma.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="prp-cta"
+                  >
+                    Learn more about Platelet Rich Plasma
+                  </a>
                 </div>
 
                 <div class="prp-side">
                   <div class="prp-callout">
-                    Call 315-478-9710 to schedule your Platelet-Rich Plasma treatments today.
+                    Call (929) 399-3134 to schedule your Platelet-Rich Plasma treatments today.
                   </div>
 
                   <div class="prp-video-wrap">

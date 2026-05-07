@@ -18,7 +18,7 @@ const props = withDefaults(
     phone?: string
   }>(),
   {
-    phone: '315-478-9710',
+    phone: '(929) 399-3134',
   },
 )
 
@@ -54,4 +54,3 @@ const phoneFormatted = phone
   text-decoration: none;
 }
 </style>
-

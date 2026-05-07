@@ -2,7 +2,7 @@
   <footer :id="sectionId" class="site-footer">
     <div class="footer-top">
       <div class="container">
-        <div class="footer-phone">315-478-9710</div>
+        <div class="footer-phone">(929) 399-3134</div>
       </div>
     </div>
 
@@ -13,7 +13,7 @@
           <ul class="footer-list">
             <li><a href="/">Home</a></li>
             <li><a href="/services">Services</a></li>
-            <li><a href="/#about">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -21,22 +21,30 @@
         <div class="footer-col">
           <h3 class="footer-heading">Find Us</h3>
           <div class="map-wrap" aria-label="Map">
-            <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" :src="mapEmbedUrl" />
+            <LocationMap class="map-frame" height="170px" :zoom="16" compact />
           </div>
           <a class="directions-button" :href="directionsUrl" target="_blank" rel="noopener noreferrer">
             Get Directions
           </a>
         </div>
 
-        <div class="footer-col">
-          <h3 class="footer-heading">Contact Us</h3>
-          <div class="footer-address">
-            Musculoskeletal Medicine, P.C.<br />
-            475 Irving Avenue<br />
-            Suite 402<br />
-            Syracuse, NY 13210
+        <div class="footer-col footer-col-contact">
+          <div class="footer-contact-row">
+            <h3 class="footer-heading footer-heading-contact">Contact Us</h3>
+            <div class="footer-address footer-address-left">
+              <div class="footer-address-title">Musculoskeletal Medicine, P.C.</div>
+              <div>475 Irving Avenue</div>
+              <div>Suite 402</div>
+              <div>Syracuse, NY 13210</div>
+              <div>315-478-9710</div>
+            </div>
+            <div class="footer-address footer-address-right">
+              <div class="footer-address-title">New York City Office</div>
+              <div>42-65 Kissena Blvd</div>
+              <div>Flushing, NY</div>
+              <div>(929) 399-3134</div>
+            </div>
           </div>
-          <a class="footer-contact-phone" href="tel:3154789710">315-478-9710</a>
 
           <img class="payment-image"
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/credit-card-logos-1920w.jpg"
@@ -67,16 +75,15 @@
 </template>
 
 <script setup lang="ts">
+import LocationMap from '../LocationMap.vue'
+import { googleMapsDirectionsUrl } from '../../config/clinicLocation'
+
 const props = defineProps<{ sectionId?: string }>()
 
 const { sectionId } = props
 
-const address = '475 Irving Ave, Syracuse, NY 13210'
-const addressEncoded = encodeURIComponent(address)
-
-// 谷歌地图展示/路线的链接（点击按钮会新开标签页展示“到达该地址”的路线）
-const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${addressEncoded}`
-const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embed`
+/** 保留原来的 Google Maps 路线跳转；国内无外网时仅影响按钮，不影响页面内地图显示 */
+const directionsUrl = googleMapsDirectionsUrl()
 </script>
 
 <style scoped>
@@ -107,7 +114,7 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.05fr 1fr;
+  grid-template-columns: 0.75fr 0.9fr 1.45fr;
   gap: 28px;
   align-items: start;
   padding: 0 60px;
@@ -157,7 +164,6 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
 
 .map-frame {
   width: 100%;
-  height: 170px;
   border: 0;
 }
 
@@ -176,20 +182,45 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   cursor: pointer;
 }
 
+.footer-col-contact {
+  min-width: 0;
+}
+
+.footer-contact-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
 .footer-address {
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 8px;
   font-weight: 500;
 }
 
-.footer-contact-phone {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 900;
+.footer-address-left {
+  text-align: left;
+}
+
+.footer-address-right {
+  text-align: right;
+}
+
+.footer-address-title {
   color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 14px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.footer-heading-contact {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .payment-image {
@@ -239,6 +270,22 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${addressEncoded}&output=embe
   .directions-button,
   .payment-image {
     max-width: 100%;
+  }
+
+  .footer-contact-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .footer-heading-contact {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .footer-address-right {
+    text-align: left;
   }
 }
 </style>

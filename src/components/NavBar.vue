@@ -10,8 +10,8 @@
       <div class="nav-right">
         <!-- 联系信息 -->
         <div class="contact-info">
-          <span class="location">Located in Syracuse, NY</span>
-          <a class="phone" href="tel:3154789710">315-478-9710</a>
+          <span class="location">NYC location<br>42-65 Kissena Blvd, Flushing, NY</span>
+          <a class="phone" href="tel:9293993134">(929) 399-3134</a>
         </div>
 
         <!-- 导航菜单 -->
@@ -61,12 +61,12 @@ const menuItems = ref<MenuItem[]>([
     name: 'Services',
     link: '/services',
     children: [
-      { id: 21, name: 'Procedures', link: '/procedures' },
-      { id: 22, name: 'Prolotherapy', link: '/services' },
-      { id: 23, name: 'Prolozone', link: '/prolozone' },
-      { id: 24, name: 'Platelet Rich Plasma', link: '/platelet-rich-plasma' },
-      { id: 25, name: 'Sacroiliac Stabilization', link: '/sacroiliac-stabilization' },
-      { id: 26, name: 'Perineural Injections', link: '/perineural-injections' }
+      { id: 21, name: 'Procedures', link: '/service/procedures' },
+      { id: 22, name: 'Prolotherapy', link: '/service/prolotherapy' },
+      { id: 23, name: 'Prolozone', link: '/service/prolozone' },
+      { id: 24, name: 'Platelet Rich Plasma', link: '/service/prp' },
+      { id: 25, name: 'Sacroiliac Stabilization', link: '/service/sacroiliac-stabilization' },
+      { id: 26, name: 'Perineural Injections', link: '/service/perineural-injections' }
     ]
   },
   { id: 3, name: 'Patient Forms', link: '/patient-forms' },

@@ -13,7 +13,7 @@
               <p class="patient-forms-body">
                 Musculoskeletal Medicine, P.C. is an independent physician practice that has been serving
                 the local area since 2001. Below are our forms for new patients, you can call us at
-                <a href="tel:3154789710">315-478-9710</a> with any questions you may have.
+                <a href="tel:3154789710">(929) 399-3134</a> with any questions you may have.
               </p>
 
               <ul class="patient-forms-links">
@@ -27,7 +27,7 @@
 
             <div class="patient-forms-side">
               <div class="patient-callout">
-                Call 315-478-9710 to schedule your Prolotherapy treatments today.
+                Call (929) 399-3134 to schedule your Prolotherapy treatments today.
               </div>
 
               <div class="patient-video-wrap">
@@ -82,20 +82,14 @@ const props = withDefaults(
     sectionId: 'forms',
   },
 )
-
 const { sectionId, heroImageSrc, videoSrc } = props
-
-
 const formLinks = [
-  { label: 'New Patient Forms', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/New%20Patient%20Form.pdf' },
-  { label: 'New Patient Consent Forms', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/3-8-19%20Patient%20consent%20form.pdf' },
-  { label: 'Patient Information Form', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20Information%20Form.pdf' },
-  { label: 'Patient History Form', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20History%20Form.pdf' },
-  { label: 'Patient Pain Diagram', href: 'https://cdn.websites.hibu.com/4f7ab16b56fa4b438d877a564ca53166/files/uploaded/Patient%20Pain%20Diagram.pdf' }
+  { label: 'New Patient Forms', href: '/pdf/New Patient Form .pdf' },
+  { label: 'New Patient Consent Forms', href: '/pdf/Patient consent form.pdf' },
+  { label: 'Patient Information Form', href: '/pdf/Patient Information Form.pdf' },
+  { label: 'Patient History Form', href: '/pdf/Patient History Form.pdf' },
+  { label: 'Patient Pain Diagram', href: '/pdf/Patient Pain Diagram.pdf' }
 ]
-
-
-
 const isOpen = ref(false)
 const videoRef = ref<HTMLVideoElement | null>(null)
 
@@ -108,7 +102,6 @@ const openModal = async () => {
     // 浏览器可能阻止自动播放，保留 controls 让用户手动播放
   }
 }
-
 const closeModal = () => {
   videoRef.value?.pause()
   isOpen.value = false

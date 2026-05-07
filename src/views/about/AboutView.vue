@@ -19,15 +19,63 @@
         </div>
       </section>
 
-      <!-- Dr. John F Finkenstadt 介绍（灰底） -->
+      <!-- Dr. Y. Michael Li 简介（灰底） -->
       <section class="doctor-section doctor-section-gray">
         <div class="container">
           <div class="doctor-grid">
             <div class="doctor-photo-wrap">
               <img
                 class="doctor-photo"
-                src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/dr-finkenstadt-320w.jpg"
-                alt="Dr. John F Finkenstadt, M.D."
+                src="/images/Dr.Li.png"
+                alt="Dr. Y. Michael Li, M.D., Ph.D."
+              />
+            </div>
+            <div class="doctor-info">
+              <h2 class="doctor-title">About Dr. Y. Michael Li, M.D., Ph.D.</h2>
+              <p class="doctor-subtitle">Neurosurgeon</p>
+              <p class="doctor-paragraph">
+                Dr. Yan Michael Li is an award-winning, fellowship-trained spine and tumor neurosurgeon specializing in complex spine disease and brain &amp; spine tumors. His clinical focus includes minimally invasive spine surgery, computer-assisted navigation, and robotic-assisted techniques when appropriate for patient anatomy and goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dr. Li 详细介绍（白底） -->
+      <section class="doctor-section doctor-section-white">
+        <div class="container">
+          <div class="doctor-info-centered">
+            <p class="doctor-paragraph">
+              Dr. Yan Michael Li is an award-winning fellowship-trained spine and tumor neurosurgeon who specializes in the treatment of complex spine diseases and brain &amp; spine tumor. Dr. Li has strong clinical interest in simple and complex spine surgery, minimally invasive spinal surgery, and computer-assisted spinal navigation and robotic surgery. Dr. Li's clinical focus includes all aspects of spinal surgery such as including herniated disk disease with nerve compression, degenerative spine stenosis, complex spine tumor, trauma and deformity diseases. Dr. Li provides the latest and most efficient treatment options for each patient with back pain, including minimally invasive herniated disk surgery through less than one inch incision, minimally invasive lateral or posterior spinal fusion surgery, artificial disc implants that allow for more mobility.
+            </p>
+            <p class="doctor-paragraph">
+              He has a reputation as an expert in complex spinal surgery, with more than 50 percent of his referrals originating from other surgeons who relied on him for revision surgeries or complex spine cases that were outside their realm of expertise. In order to achieve the very best in patient outcomes, Dr. Li's practice emphasizes an interdisciplinary approach to disease processes and he works very closely with other specialists such as pain specialists, neurologists and physical therapists.
+            </p>
+            <p class="doctor-paragraph">
+              Dr. Li treats patients with brain and spine tumor, including gliomas, meningioma, metastatic disease, skull base lesions. He employs advanced awake mapping, imaging techniques, intraoperative navigation and microsurgery to ensure maximal tumor removal and achieve the safest possible surgical outcomes. Dr. Li has advanced training in some of the most leading-edge technologies available, allowing him to provide the latest, most efficient options for each patient. These technologies include minimally invasive and endoscopic surgery for spine, brain and skull base tumors, advanced laser surgery for brain and metastatic spine tumor, primary spine tumor en bloc resection, stereotactic radiosurgery. Furthermore, Dr. Li works with a multi-disciplinary team to ensure that the best possible treatment strategies are offered to his patients and individualized treatments for brain and spine tumors based on personal genomic profiling.
+            </p>
+            <p class="doctor-paragraph">
+              Dr. Li received his medical degree from Peking Union Medical College and his PhD from University of Texas MD Anderson Cancer Center. He then completed neurosurgical residency and enfolded complex spine fellowship at State University of New York, fellowships at Dana Farber Cancer Center Boston Children Hospital and Brigham and Women's Hospital Harvard Medical School, as well as a Neurosurgical Oncology fellowship at University of Texas MD Anderson Cancer Center focusing complex brain and spine tumor surgery.
+            </p>
+            <p class="doctor-paragraph">
+              Dr. Li has authored 76 scholarly articles in peer-reviewed journals and book chapters such as Nature Medicine, Cancer Cell, Journal of Neurosurgery, Neurosurgery, Spine, Journal of Spine, Clinical Spine Surgery, JAMA Oncology, Cancer Research, Journal of Neuro-Oncology, Global Spine Journal, World Neurosurgery, Clinical Neuroscience et al. He has received Bittner Award on Brain Tumor Research from American Association of Neurological Surgeons and awards from the Department of Defense Cancer Research Program, and his patent of nanoparticle gene therapy has been adopted in NCI Clinical Trial.
+            </p>
+            <p class="doctor-paragraph">
+              He is currently performing research focused on maximal safe resection of brain and spine tumor, surgical outcome study for complex brain and spine surgery, cancer specific brain and spine tumor targeted therapy and local delivery.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dr. John F. Finkenstadt 介绍（灰底） -->
+      <section class="doctor-section doctor-section-gray doctor-profile-section">
+        <div class="container">
+          <div class="doctor-grid doctor-profile-grid">
+            <div class="doctor-photo-wrap">
+              <img
+                class="doctor-photo"
+                src="/images/Dr.Finkenstadt.png"
+                alt="Dr. John F. Finkenstadt, M.D."
               />
             </div>
             <div class="doctor-info">
@@ -36,16 +84,31 @@
                 I have devoted my medical career to treating disorders of the musculoskeletal system. Originally Board Certified as a Family Physician, I subsequently went on to obtain a Certificate of Added Qualification (CAQ) in Sports Medicine.
               </p>
               <p class="doctor-paragraph">
-                In the 1980's, with the support of the medical group of Prepaid Health Plan (PHP), I was able to establish a Department of Musculoskeletal Medicine. My private practice was opened in 2001 at the Madison-Irving Medical Center in Syracuse, New York.
+                In the 1980’s, with the support of the medical group of Prepaid Health Plan (PHP), I was able to establish a Department of Musculoskeletal Medicine. My private practice was opened in 2001 at the Madison-Irving Medical Center in Syracuse, New York.
               </p>
               <p class="doctor-paragraph">
-                Early in my training, I was introduced to Orthopaedic Medicine (non-surgical orthopedics) as developed by Dr. James Cyriax which started my journey into a better understanding of the diagnosis and treatment of musculoskeletal conditions.
+                Early in my training, I was introduced to Orthopaedic Medicine (non-surgical orthopedics) as developed by Dr. James Cyriax which started my journey into a better understanding of the diagnosis and treatment of musculoskeletal disorders. Shortly thereafter, I added basic manipulation, joint injections, epidurals, and prolotherapy.
               </p>
               <p class="doctor-paragraph">
-                Over the years I have expanded my knowledge and skill set by studying under many of the leaders in the field of Musculoskeletal Medicine, including training in Prolotherapy, Prolozone, Platelet Rich Plasma (PRP), Perineural Injection Therapy, Osteopathic Manipulation, and Diagnostic Musculoskeletal Ultrasound.
+                Prolotherapy was the first regenerative treatment modality added which is aimed at strengthening injured connective tissue. I was fortunate to have been trained personally by Dr. Gus Hemwall. I remain grateful to Dr. Jeffrey Patterson and to my many colleagues associated with the Hackett Hemwall Foundation.
               </p>
               <p class="doctor-paragraph">
-                I am honored to provide this level of care to the patients that are seen by my office.
+                My educational journey led me to be certified in acupuncture after finishing the program at UCLA followed by a trip to China. I have attended multiple educational meetings for training in spinal injections. Through the Canadian College of Osteopathy, I completed a 5 year program in osteopathic diagnosis and manipulation methods.
+              </p>
+              <p class="doctor-paragraph">
+                Throughout my career, I have continued to search for the latest effective treatments for treating musculoskeletal pain. Two of the latest treatment additions have been neuropathic injection treatment (aka. perineural injection treatment) developed by Dr. John Lyftogt. Another effective addition has been injections augmented with the addition of an oxygen/ozone mixture known as prolozone developed by Dr. Frank Shallenberger. I am grateful to both of these medical pioneers for their guidance.
+              </p>
+              <p class="doctor-paragraph">
+                Treating unstable sacroiliac joints has been one of my special interests and as a result I have developed a specialized procedure to treat this difficult and often unrecognized common problem.
+              </p>
+              <p class="doctor-paragraph">
+                Platelet rich plasma (PRP) injections have been a regular part of my practice for a number of years. I am presently investigating the addition of stem cell treatment methods.
+              </p>
+              <p class="doctor-paragraph">
+                Fluoroscopy and ultrasound imaging are available in the office to aid in diagnosis and to help in more accurate placement of injections.
+              </p>
+              <p class="doctor-paragraph">
+                In addition, I have had the opportunity of serving on multiple medical mission trips to Central and South America. I am a past president of the American Association of Orthopaedic Medicine and a fellow of the American Academy of Pain Management. Several university based research projects and clinical studies have been developed and completed by my office.
               </p>
               <p class="doctor-paragraph">
                 Before closing, I would like to personally thank all the patients that have trusted me with caring for them and appreciate the confidence they have placed in me over the years.
@@ -55,14 +118,14 @@
         </div>
       </section>
 
-      <!-- Dr. Kenneth A. Iles 介绍（白底） -->
-      <section class="doctor-section doctor-section-white">
+      <!-- Dr. Kenneth A. Iles 介绍（灰底） -->
+      <section class="doctor-section doctor-section-gray doctor-profile-section">
         <div class="container">
-          <div class="doctor-grid">
+          <div class="doctor-grid doctor-profile-grid">
             <div class="doctor-photo-wrap">
               <img
                 class="doctor-photo"
-                src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/dr-iles-320w.jpg"
+                src="/images/Dr.Iles.png"
                 alt="Dr. Kenneth A. Iles, M.D."
               />
             </div>
@@ -166,7 +229,7 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
 }
 
 .doctor-title {
-  margin: 0 0 22px;
+  margin: 0 0 10px;
   color: var(--brand-red);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 28px;
@@ -174,11 +237,39 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
   font-weight: 800;
 }
 
+.doctor-subtitle {
+  margin: 0 0 18px;
+  color: #2b2b2b;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
 .doctor-paragraph {
   margin: 0 0 18px;
   color: #4a4a4a;
   font-size: 15px;
   line-height: 1.7;
+}
+
+.doctor-profile-section {
+  padding: 64px 0;
+}
+
+.doctor-profile-grid {
+  grid-template-columns: 320px minmax(0, 650px);
+  gap: 32px;
+  justify-content: center;
+}
+
+.doctor-profile-grid .doctor-title {
+  margin-bottom: 24px;
+  font-size: 27px;
+}
+
+.doctor-profile-grid .doctor-paragraph {
+  margin-bottom: 24px;
+  line-height: 1.65;
 }
 
 @media (max-width: 900px) {
@@ -193,6 +284,10 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
   .doctor-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
   }
 
   .doctor-photo-wrap {
@@ -212,5 +307,11 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
   .doctor-section {
     padding: 36px 0;
   }
+}
+
+.doctor-info-centered {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
 }
 </style>

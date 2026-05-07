@@ -28,14 +28,19 @@
                 PC can help you get back on your feet and return to full functionality fast.
               </p>
 
-              <button type="button" class="service-cta">
+              <a
+                href="/pdf/Prolotherapyreatment.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="service-cta"
+              >
                 Learn more about Prolotherapy
-              </button>
+              </a>
             </div>
 
             <div class="service-side">
               <div class="service-callout">
-                Call 315-478-9710 to schedule your Prolotherapy treatments today.
+                Call (929) 399-3134 to schedule your Prolotherapy treatments today.
               </div>
 
               <div class="service-video-wrap">

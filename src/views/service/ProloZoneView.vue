@@ -7,9 +7,7 @@
         <div class="prolozone-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/prolozone-hero-2880w.jpg"
-            alt="Prolozone hero"
-            class="prolozone-hero-image"
-          />
+            alt="Prolozone hero" class="prolozone-hero-image" />
         </div>
 
         <div class="prolozone-content">
@@ -38,14 +36,19 @@
                     pain with our Prolozone treatments.
                   </p>
 
-                  <button type="button" class="prolozone-cta">
+                  <a
+                    href="/pdf/Prolozone.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="prolozone-cta"
+                  >
                     Learn more about Prolozone
-                  </button>
+                  </a>
                 </div>
 
                 <div class="prolozone-side">
                   <div class="prolozone-callout">
-                    Call 315-478-9710 to schedule your Prolozone treatments today.
+                    Call (929) 399-3134 to schedule your Prolozone treatments today.
                   </div>
 
                   <div class="prolozone-video-wrap">
@@ -329,4 +332,3 @@ onBeforeUnmount(() => {
   }
 }
 </style>
-
