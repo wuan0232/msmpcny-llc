@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import AudioEyeWidget from './components/AudioEyeWidget.vue'
 </script>
 
 <template>
   <RouterView />
-  <AudioEyeWidget />
 </template>
 
 <style scoped>
