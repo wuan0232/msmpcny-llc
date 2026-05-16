@@ -7,7 +7,11 @@
         <div class="pn-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/epidural-injections-hero-2880w.jpg"
-            alt="Perineural injections hero" class="pn-hero-image" />
+            alt="Perineural injections hero"
+            class="pn-hero-image"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
 
         <div class="pn-content">

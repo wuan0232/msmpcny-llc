@@ -3,7 +3,13 @@
     <div class="nav-inner">
       <!-- 左侧品牌图片 -->
       <div class="brand">
-        <img src="/images/title.png" alt="MUSCULOSKELETAL MEDICINE, P.C." class="brand-img" />
+        <ResponsivePublicPicture
+          src="/images/title.png"
+          alt="MUSCULOSKELETAL MEDICINE, P.C."
+          sizes="(max-width: 600px) 220px, 280px"
+          img-class="brand-img"
+          decoding="async"
+        />
       </div>
 
       <!-- 右侧：联系信息 + 导航菜单 -->
@@ -37,6 +43,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
+import ResponsivePublicPicture from './ResponsivePublicPicture.vue'
 
 interface ChildItem {
   id: number
@@ -138,7 +145,7 @@ onUnmounted(() => {
   align-items: center;
 }
 
-.brand-img {
+.brand :deep(.brand-img) {
   height: 45px;
   width: auto;
   display: block;
@@ -177,7 +184,7 @@ onUnmounted(() => {
     justify-content: center;
   }
 
-  .brand-img {
+  .brand :deep(.brand-img) {
     height: 38px;
   }
 
@@ -204,7 +211,7 @@ onUnmounted(() => {
     padding: 12px 16px;
   }
 
-  .brand-img {
+  .brand :deep(.brand-img) {
     height: 40px;
   }
 
@@ -371,7 +378,7 @@ onUnmounted(() => {
     flex-direction: column;
   }
 
-  .brand-img {
+  .brand :deep(.brand-img) {
     height: 34px;
   }
 

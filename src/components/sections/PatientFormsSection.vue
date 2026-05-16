@@ -1,7 +1,13 @@
 <template>
   <section :id="sectionId" class="patient-forms-section">
     <div class="patient-forms-hero">
-      <img :src="heroImageSrc" alt="Patient forms hero" class="patient-forms-hero-image" />
+      <img
+        :src="heroImageSrc"
+        alt="Patient forms hero"
+        class="patient-forms-hero-image"
+        fetchpriority="high"
+        decoding="async"
+      />
     </div>
 
     <div class="patient-forms-content">

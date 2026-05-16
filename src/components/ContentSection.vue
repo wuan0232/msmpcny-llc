@@ -1,7 +1,13 @@
 <template>
   <section :id="sectionId" :class="sectionClass">
     <div :class="heroClass">
-      <img :src="heroImageSrc" :alt="heroAlt" :class="heroImageClass" />
+      <img
+        :src="heroImageSrc"
+        :alt="heroAlt"
+        :class="heroImageClass"
+        fetchpriority="high"
+        decoding="async"
+      />
     </div>
 
     <div :class="contentClass">

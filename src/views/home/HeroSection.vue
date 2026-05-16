@@ -1,8 +1,19 @@
 <template>
   <section id="home" class="hero-section">
-    <img src="/images/image1.png" alt="Musculoskeletal Medicine hero" class="hero-image" />
+    <ResponsivePublicPicture
+      src="/images/image1.png"
+      alt="Musculoskeletal Medicine hero"
+      sizes="100vw"
+      img-class="hero-image"
+      fetchpriority="high"
+      decoding="async"
+    />
   </section>
 </template>
+
+<script setup lang="ts">
+import ResponsivePublicPicture from '../../components/ResponsivePublicPicture.vue'
+</script>
 
 <style scoped>
 .hero-section {
@@ -12,7 +23,7 @@
   overflow-x: hidden;
 }
 
-.hero-image {
+.hero-section :deep(.hero-image) {
   display: block;
   width: 100%;
   height: calc(100vh - 120px);
@@ -28,7 +39,7 @@
     scroll-margin-top: 100px;
   }
 
-  .hero-image {
+  .hero-section :deep(.hero-image) {
     height: calc(100vh - 100px);
     min-height: 400px;
   }
@@ -40,7 +51,7 @@
     scroll-margin-top: 80px;
   }
 
-  .hero-image {
+  .hero-section :deep(.hero-image) {
     height: calc(100vh - 80px);
     min-height: 350px;
   }
@@ -51,7 +62,7 @@
     scroll-margin-top: 70px;
   }
 
-  .hero-image {
+  .hero-section :deep(.hero-image) {
     height: calc(100vh - 70px);
     min-height: 300px;
   }

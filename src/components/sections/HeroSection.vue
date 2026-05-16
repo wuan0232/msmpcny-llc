@@ -1,6 +1,12 @@
 <template>
   <section :id="sectionId" class="hero-section">
-    <img :src="imageSrc" :alt="imageAlt" class="hero-image" />
+    <img
+      :src="imageSrc"
+      :alt="imageAlt"
+      class="hero-image"
+      fetchpriority="high"
+      decoding="async"
+    />
   </section>
 </template>
 

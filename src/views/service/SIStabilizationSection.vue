@@ -7,7 +7,11 @@
         <div class="si-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/sacroiliac-stabilization-hero-2880w.jpg"
-            alt="Sacroiliac stabilization hero" class="si-hero-image" />
+            alt="Sacroiliac stabilization hero"
+            class="si-hero-image"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
 
         <div class="si-content">

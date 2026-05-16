@@ -1,7 +1,13 @@
 <template>
   <section :id="sectionId" class="service-section">
     <div class="service-hero">
-      <img :src="heroImageSrc" alt="Prolotherapy hero" class="service-hero-image" />
+      <img
+        :src="heroImageSrc"
+        alt="Prolotherapy hero"
+        class="service-hero-image"
+        fetchpriority="high"
+        decoding="async"
+      />
     </div>
 
     <div class="service-content">

@@ -24,10 +24,13 @@
         <div class="container">
           <div class="doctor-grid">
             <div class="doctor-photo-wrap">
-              <img
-                class="doctor-photo"
+              <ResponsivePublicPicture
                 src="/images/Dr.Li.png"
                 alt="Dr. Y. Michael Li, M.D., Ph.D."
+                sizes="(max-width: 900px) min(86vw, 260px), 260px"
+                img-class="doctor-photo"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
             <div class="doctor-info">
@@ -72,10 +75,13 @@
         <div class="container">
           <div class="doctor-grid doctor-profile-grid">
             <div class="doctor-photo-wrap">
-              <img
-                class="doctor-photo"
+              <ResponsivePublicPicture
                 src="/images/Dr.Finkenstadt.png"
                 alt="Dr. John F. Finkenstadt, M.D."
+                sizes="(max-width: 900px) min(86vw, 320px), 320px"
+                img-class="doctor-photo"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="doctor-info">
@@ -123,10 +129,13 @@
         <div class="container">
           <div class="doctor-grid doctor-profile-grid">
             <div class="doctor-photo-wrap">
-              <img
-                class="doctor-photo"
+              <ResponsivePublicPicture
                 src="/images/Dr.Iles.png"
                 alt="Dr. Kenneth A. Iles, M.D."
+                sizes="(max-width: 900px) min(86vw, 320px), 320px"
+                img-class="doctor-photo"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="doctor-info">
@@ -152,6 +161,7 @@
 
 <script setup lang="ts">
 import NavBar from '../../components/NavBar.vue'
+import ResponsivePublicPicture from '../../components/ResponsivePublicPicture.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
 </script>
 
@@ -216,7 +226,7 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
   width: 100%;
 }
 
-.doctor-photo {
+.doctor-section :deep(.doctor-photo) {
   display: block;
   width: 100%;
   height: auto;

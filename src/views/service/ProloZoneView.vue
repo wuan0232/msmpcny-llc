@@ -7,7 +7,11 @@
         <div class="prolozone-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/prolozone-hero-2880w.jpg"
-            alt="Prolozone hero" class="prolozone-hero-image" />
+            alt="Prolozone hero"
+            class="prolozone-hero-image"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
 
         <div class="prolozone-content">

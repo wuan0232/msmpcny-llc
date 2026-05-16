@@ -9,7 +9,14 @@
 
       <div class="feature-row">
         <div class="feature-media">
-          <img :src="imageSrc" :alt="imageAlt" class="feature-image" />
+          <ResponsivePublicPicture
+            :src="imageSrc"
+            :alt="imageAlt"
+            sizes="(max-width: 900px) 100vw, 44vw"
+            img-class="feature-image"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div class="feature-copy">
@@ -26,6 +33,8 @@
 </template>
 
 <script setup lang="ts">
+import ResponsivePublicPicture from '../ResponsivePublicPicture.vue'
+
 type Background = 'grey' | 'white'
 type ButtonAlign = 'left' | 'center'
 
@@ -105,7 +114,7 @@ const {
   flex: 1;
 }
 
-.feature-image {
+.feature-section :deep(.feature-image) {
   width: 100%;
   height: auto;
   display: block;

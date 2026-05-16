@@ -7,7 +7,11 @@
         <div class="prp-hero">
           <img
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/platelet-rich-plasma-hero-2880w.jpg"
-            alt="Platelet rich plasma hero" class="prp-hero-image" />
+            alt="Platelet rich plasma hero"
+            class="prp-hero-image"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
 
         <div class="prp-content">

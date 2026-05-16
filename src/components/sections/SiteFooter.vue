@@ -46,9 +46,13 @@
             </div>
           </div>
 
-          <img class="payment-image"
+          <img
+            class="payment-image"
             src="https://le-cdn.hibuwebsites.com/4f7ab16b56fa4b438d877a564ca53166/dms3rep/multi/opt/credit-card-logos-1920w.jpg"
-            alt="Visa, MasterCard, Discover, Cash and Personal Check accepted" />
+            alt="Visa, MasterCard, Discover, Cash and Personal Check accepted"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
 

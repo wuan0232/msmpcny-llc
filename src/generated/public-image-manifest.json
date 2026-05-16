@@ -1,0 +1,38 @@
+{
+  "Dr.Finkenstadt": {
+    "webpSrcset": "/images/Dr.Finkenstadt-480.webp 480w, /images/Dr.Finkenstadt-607.webp 607w",
+    "fallback": "/images/Dr.Finkenstadt-fallback.jpg"
+  },
+  "Dr.Iles": {
+    "webpSrcset": "/images/Dr.Iles-480.webp 480w, /images/Dr.Iles-611.webp 611w",
+    "fallback": "/images/Dr.Iles-fallback.jpg"
+  },
+  "Dr.Li": {
+    "webpSrcset": "/images/Dr.Li-480.webp 480w, /images/Dr.Li-800.webp 800w, /images/Dr.Li-863.webp 863w",
+    "fallback": "/images/Dr.Li-fallback.jpg"
+  },
+  "image1": {
+    "webpSrcset": "/images/image1-480.webp 480w, /images/image1-800.webp 800w, /images/image1-1200.webp 1200w, /images/image1-1920.webp 1920w",
+    "fallback": "/images/image1-fallback.jpg"
+  },
+  "section1": {
+    "webpSrcset": "/images/section1-480.webp 480w, /images/section1-800.webp 800w, /images/section1-852.webp 852w",
+    "fallback": "/images/section1-fallback.jpg"
+  },
+  "section2": {
+    "webpSrcset": "/images/section2-480.webp 480w, /images/section2-800.webp 800w, /images/section2-855.webp 855w",
+    "fallback": "/images/section2-fallback.jpg"
+  },
+  "section3": {
+    "webpSrcset": "/images/section3-480.webp 480w, /images/section3-800.webp 800w, /images/section3-853.webp 853w",
+    "fallback": "/images/section3-fallback.jpg"
+  },
+  "section4": {
+    "webpSrcset": "/images/section4-480.webp 480w, /images/section4-800.webp 800w, /images/section4-850.webp 850w",
+    "fallback": "/images/section4-fallback.jpg"
+  },
+  "title": {
+    "webpSrcset": "/images/title-441.webp 441w",
+    "fallback": "/images/title-fallback.jpg"
+  }
+}
