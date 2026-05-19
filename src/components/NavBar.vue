@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import ResponsivePublicPicture from './ResponsivePublicPicture.vue'
 
@@ -78,7 +78,8 @@ const menuItems = ref<MenuItem[]>([
   },
   { id: 3, name: 'Patient Forms', link: '/patient-forms' },
   { id: 4, name: 'About', link: '/about' },
-  { id: 5, name: 'Contact', link: '/contact' }
+  { id: 5, name: 'Contact', link: '/contact' },
+  { id: 6, name: 'Blog', link: '/blog' },
 ])
 
 // 根据当前路由设置激活状态
@@ -107,6 +108,8 @@ onMounted(() => {
   updateActiveState()
   window.addEventListener('hashchange', updateActiveState)
 })
+
+watch(() => route.path, updateActiveState)
 
 // 组件卸载时移除事件监听
 onUnmounted(() => {
