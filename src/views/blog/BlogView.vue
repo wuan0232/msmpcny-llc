@@ -18,8 +18,8 @@
         <div class="container">
           <div class="blog-meta-bar">
             <span class="blog-meta-pill">Latest insights</span>
-            <span class="blog-meta-count">{{ blogPosts.length }} sample articles</span>
-            <span class="blog-meta-note">Preview content only</span>
+            <span class="blog-meta-count">{{ totalItems }} articles</span>
+            <span class="blog-meta-note">Site: msmpcny.aihnet.com</span>
           </div>
 
           <div
@@ -35,12 +35,23 @@
             @pointercancel="onPointerUp"
             @pointerleave="onPointerUp"
           >
-            <Transition name="blog-page" mode="out-in">
-              <ul :key="currentPage" class="blog-grid">
-                <li v-for="post in paginatedPosts" :key="post.id" class="blog-card-item">
+            <div v-if="isLoading" class="blog-load-state">Loading blog posts...</div>
+            <div v-else-if="errorMessage" class="blog-error-state">
+              <p>{{ errorMessage }}</p>
+              <button type="button" class="blog-page-btn" @click="reloadCurrentPage">Retry</button>
+            </div>
+            <div v-else-if="posts.length === 0" class="blog-empty-state">
+              No published articles found for this site.
+            </div>
+            <Transition v-else name="blog-page" mode="out-in">
+              <ul :key="`${activeSiteId}-${currentPage}`" class="blog-grid">
+                <li v-for="post in posts" :key="post.id" class="blog-card-item">
                   <article class="blog-card">
+                    <div v-if="post.imageUrl" class="blog-card-image-wrap">
+                      <img :src="post.imageUrl" :alt="post.imageAlt" class="blog-card-image" loading="lazy" decoding="async" />
+                    </div>
                     <header class="blog-card-header">
-                      <time class="blog-card-date" :datetime="post.date">{{ post.date }}</time>
+                      <time class="blog-card-date" :datetime="post.dateIso">{{ post.dateLabel }}</time>
                       <span class="blog-card-category">{{ post.category }}</span>
                     </header>
 
@@ -48,7 +59,12 @@
 
                     <p class="blog-card-excerpt">{{ post.excerpt }}</p>
 
-                    <span class="blog-card-link" aria-hidden="true">Read article details</span>
+                    <RouterLink
+                      class="blog-card-link"
+                      :to="{ name: 'blog-detail', params: { postId: post.id }, query: { site: activeSiteId } }"
+                    >
+                      Read article details
+                    </RouterLink>
                   </article>
                 </li>
               </ul>
@@ -64,11 +80,11 @@
             </p>
           </div>
 
-          <nav class="blog-pagination" aria-label="Blog articles pagination">
+          <nav v-if="totalPages > 1" class="blog-pagination" aria-label="Blog articles pagination">
             <button
               type="button"
               class="blog-page-btn blog-page-btn--arrow"
-              :disabled="currentPage <= 1"
+              :disabled="currentPage <= 1 || isLoading"
               aria-label="Previous page"
               @click="goPrev"
             >
@@ -84,6 +100,7 @@
                 :class="{ 'blog-page-dot--active': page === currentPage }"
                 :aria-label="`Page ${page}`"
                 :aria-current="page === currentPage ? 'page' : undefined"
+                :disabled="isLoading"
                 @click="goToPage(page)"
               />
             </div>
@@ -96,7 +113,7 @@
             <button
               type="button"
               class="blog-page-btn blog-page-btn--arrow"
-              :disabled="currentPage >= totalPages"
+              :disabled="currentPage >= totalPages || isLoading"
               aria-label="Next page"
               @click="goNext"
             >
@@ -112,10 +129,27 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
-import { blogPosts } from './blogPosts'
+import {
+  extractFirstImageRef,
+  fetchBlogImage,
+  fetchBlogPosts,
+  type BlogListPost,
+} from './blogApi'
+import { cachePosts } from './blogState'
+
+interface BlogCardPost {
+  id: string
+  title: string
+  excerpt: string
+  dateIso: string
+  dateLabel: string
+  category: string
+  imageUrl: string
+  imageAlt: string
+}
 
 const PAGE_SIZE = 9
 const SWIPE_THRESHOLD = 56
@@ -123,17 +157,25 @@ const SWIPE_THRESHOLD = 56
 const currentPage = ref(1)
 const carouselRef = ref<HTMLElement | null>(null)
 
-const totalPages = computed(() => Math.max(1, Math.ceil(blogPosts.length / PAGE_SIZE)))
+const posts = ref<BlogCardPost[]>([])
+const totalItems = ref(0)
+const activeSiteId = ref('msmpcny')
+const isLoading = ref(false)
+const errorMessage = ref('')
 
-const paginatedPosts = computed(() => {
-  const start = (currentPage.value - 1) * PAGE_SIZE
-  return blogPosts.slice(start, start + PAGE_SIZE)
+const totalPages = computed(() => Math.max(1, Math.ceil(totalItems.value / PAGE_SIZE)))
+const pageRangeLabel = computed(() => {
+  if (totalItems.value === 0) {
+    return '0 of 0'
+  }
+  const start = (currentPage.value - 1) * PAGE_SIZE + 1
+  const end = Math.min(currentPage.value * PAGE_SIZE, totalItems.value)
+  return `${start}-${end} of ${totalItems.value}`
 })
 
-const pageRangeLabel = computed(() => {
-  const start = (currentPage.value - 1) * PAGE_SIZE + 1
-  const end = Math.min(currentPage.value * PAGE_SIZE, blogPosts.length)
-  return `${start}–${end} of ${blogPosts.length}`
+watch(currentPage, () => {
+  if (!activeSiteId.value) return
+  void loadPosts()
 })
 
 watch(totalPages, (pages) => {
@@ -142,11 +184,101 @@ watch(totalPages, (pages) => {
   }
 })
 
+let postsAbortController: AbortController | null = null
+
+onMounted(async () => {
+  await initializePage()
+})
+
+async function initializePage() {
+  errorMessage.value = ''
+  await loadPosts()
+}
+
+async function loadPosts() {
+  if (!activeSiteId.value) return
+  if (postsAbortController) {
+    postsAbortController.abort()
+  }
+  postsAbortController = new AbortController()
+  const { signal } = postsAbortController
+
+  isLoading.value = true
+  errorMessage.value = ''
+
+  try {
+    const data = await fetchBlogPosts(activeSiteId.value, currentPage.value, PAGE_SIZE, signal)
+    const mapped = await Promise.all(data.items.map((post) => mapToCardPost(post, activeSiteId.value, signal)))
+    if (signal.aborted) return
+
+    cachePosts(activeSiteId.value, data.items)
+    posts.value = mapped
+    totalItems.value = data.total ?? 0
+  } catch (error) {
+    if (signal.aborted) return
+    posts.value = []
+    totalItems.value = 0
+    errorMessage.value = toErrorMessage(error, 'Failed to load posts from API.')
+  } finally {
+    if (!signal.aborted) {
+      isLoading.value = false
+    }
+  }
+}
+
+async function mapToCardPost(post: BlogListPost, siteId: string, signal: AbortSignal): Promise<BlogCardPost> {
+  const imageRef = extractFirstImageRef(post)
+  let imageUrl = imageRef?.url ?? ''
+  const imageAlt = imageRef?.alt?.trim() || post.title
+
+  if (!imageUrl && imageRef?.id) {
+    try {
+      const image = await fetchBlogImage(siteId, imageRef.id, signal)
+      imageUrl = image.url
+    } catch {
+      imageUrl = ''
+    }
+  }
+
+  const createdAt = post.createdAt ?? ''
+  return {
+    id: post.id,
+    title: post.title || 'Untitled',
+    excerpt: (post.excerpt ?? '').trim() || 'No summary available.',
+    dateIso: createdAt,
+    dateLabel: formatDateLabel(createdAt),
+    category: 'Patient education',
+    imageUrl,
+    imageAlt,
+  }
+}
+
+function formatDateLabel(dateValue: string): string {
+  if (!dateValue) return 'N/A'
+  const date = new Date(dateValue)
+  if (Number.isNaN(date.getTime())) return dateValue
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  })
+    .format(date)
+    .toUpperCase()
+}
+
+function toErrorMessage(error: unknown, fallback: string): string {
+  if (error instanceof Error && error.message) {
+    return `${fallback} ${error.message}`
+  }
+  return fallback
+}
+
 function scrollCarouselIntoView() {
   carouselRef.value?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
 }
 
 function goToPage(page: number) {
+  if (isLoading.value) return
   const next = Math.min(Math.max(1, page), totalPages.value)
   if (next === currentPage.value) return
   currentPage.value = next
@@ -161,10 +293,16 @@ function goNext() {
   goToPage(currentPage.value + 1)
 }
 
+function reloadCurrentPage() {
+  void loadPosts()
+}
+
 /* Touch swipe */
 let touchStartX = 0
 
 function onTouchStart(event: TouchEvent) {
+  const target = event.target as HTMLElement | null
+  if (target?.closest('a,button,input,select,textarea')) return
   touchStartX = event.touches[0]?.clientX ?? 0
   dragOffsetX.value = 0
   isDragging.value = true
@@ -190,6 +328,8 @@ let pointerId: number | null = null
 
 function onPointerDown(event: PointerEvent) {
   if (event.pointerType === 'touch') return
+  const target = event.target as HTMLElement | null
+  if (target?.closest('a,button,input,select,textarea')) return
   pointerId = event.pointerId
   pointerStartX = event.clientX
   dragOffsetX.value = 0
@@ -218,6 +358,7 @@ function onPointerUp(event: PointerEvent) {
 }
 
 function finishSwipe(deltaX: number) {
+  if (isLoading.value || totalPages.value <= 1) return
   if (deltaX <= -SWIPE_THRESHOLD) {
     goNext()
     return
@@ -306,6 +447,41 @@ function finishSwipe(deltaX: number) {
   color: #5c6570;
 }
 
+.blog-meta-health {
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.blog-meta-health.is-up {
+  background: #e6f6ec;
+  color: #18643a;
+}
+
+.blog-meta-health.is-down {
+  background: #fde8e8;
+  color: #a12828;
+}
+
+.blog-site-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.blog-site-picker select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 13px;
+  color: #0f2438;
+  background: #ffffff;
+}
+
 .blog-carousel {
   position: relative;
   touch-action: pan-y;
@@ -349,6 +525,26 @@ function finishSwipe(deltaX: number) {
   gap: 24px;
 }
 
+.blog-load-state,
+.blog-empty-state,
+.blog-error-state {
+  margin: 0;
+  padding: 32px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #5c6570;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(15, 36, 56, 0.06);
+}
+
+.blog-error-state {
+  color: #a12828;
+}
+
+.blog-error-state p {
+  margin: 0 0 14px;
+}
+
 .blog-page-enter-active,
 .blog-page-leave-active {
   transition:
@@ -375,6 +571,21 @@ function finishSwipe(deltaX: number) {
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(15, 36, 56, 0.08);
   box-sizing: border-box;
+}
+
+.blog-card-image-wrap {
+  margin: -22px -22px 14px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #e5e7eb;
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .blog-card-header {
@@ -422,10 +633,19 @@ function finishSwipe(deltaX: number) {
 }
 
 .blog-card-link {
-  align-self: flex-start;
+  display: block;
+  width: calc(100% + 44px);
+  margin: 4px -22px -20px;
+  padding: 16px 22px;
+  border-top: 1px solid #e5e7eb;
   font-size: 14px;
   font-weight: 700;
   color: #0f2438;
+  text-decoration: none;
+}
+
+.blog-card-link:hover {
+  color: var(--brand-red);
 }
 
 .blog-pagination {
@@ -548,6 +768,10 @@ function finishSwipe(deltaX: number) {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+
+  .blog-meta-health {
+    margin-left: 0;
   }
 
   .blog-card-header {
