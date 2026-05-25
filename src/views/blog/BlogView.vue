@@ -43,7 +43,7 @@
             <div v-else-if="posts.length === 0" class="blog-empty-state">
               No published articles found for this site.
             </div>
-            <Transition v-else name="blog-page" mode="out-in">
+            <Transition v-else name="blog-page">
               <ul :key="`${activeSiteId}-${currentPage}`" class="blog-grid">
                 <li v-for="post in posts" :key="post.id" class="blog-card-item">
                   <article class="blog-card">
@@ -86,7 +86,7 @@
               class="blog-page-btn blog-page-btn--arrow"
               :disabled="currentPage <= 1 || isLoading"
               aria-label="Previous page"
-              @click="goPrev"
+              @click="goToPage(currentPage - 1)"
             >
               ‹
             </button>
@@ -115,7 +115,7 @@
               class="blog-page-btn blog-page-btn--arrow"
               :disabled="currentPage >= totalPages || isLoading"
               aria-label="Next page"
-              @click="goNext"
+              @click="goToPage(currentPage + 1)"
             >
               ›
             </button>
@@ -132,146 +132,38 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
+import { cachePosts, fetchBlogPosts } from './blogApi'
 import {
-  extractFirstImageRef,
-  fetchBlogImage,
-  fetchBlogPosts,
-  type BlogListPost,
-} from './blogApi'
-import { cachePosts } from './blogState'
+  BLOG_DEFAULT_SITE_ID,
+  BLOG_LIST_PAGE_SIZE,
+  enrichListCardImages,
+  getListPageCache,
+  mapPostToCardSync,
+  setListPageCache,
+  toBlogErrorMessage,
+  type BlogCardPost,
+} from './blogUtils'
+import { useBlogCarouselSwipe } from './useBlogCarouselSwipe'
 
-interface BlogCardPost {
-  id: string
-  title: string
-  excerpt: string
-  dateIso: string
-  dateLabel: string
-  category: string
-  imageUrl: string
-  imageAlt: string
-}
-
-const PAGE_SIZE = 9
-const SWIPE_THRESHOLD = 56
+defineOptions({ name: 'BlogView' })
 
 const currentPage = ref(1)
 const carouselRef = ref<HTMLElement | null>(null)
-
 const posts = ref<BlogCardPost[]>([])
 const totalItems = ref(0)
-const activeSiteId = ref('msmpcny')
+const activeSiteId = ref(BLOG_DEFAULT_SITE_ID)
 const isLoading = ref(false)
 const errorMessage = ref('')
 
-const totalPages = computed(() => Math.max(1, Math.ceil(totalItems.value / PAGE_SIZE)))
+const totalPages = computed(() => Math.max(1, Math.ceil(totalItems.value / BLOG_LIST_PAGE_SIZE)))
 const pageRangeLabel = computed(() => {
-  if (totalItems.value === 0) {
-    return '0 of 0'
-  }
-  const start = (currentPage.value - 1) * PAGE_SIZE + 1
-  const end = Math.min(currentPage.value * PAGE_SIZE, totalItems.value)
+  if (totalItems.value === 0) return '0 of 0'
+  const start = (currentPage.value - 1) * BLOG_LIST_PAGE_SIZE + 1
+  const end = Math.min(currentPage.value * BLOG_LIST_PAGE_SIZE, totalItems.value)
   return `${start}-${end} of ${totalItems.value}`
 })
 
-watch(currentPage, () => {
-  if (!activeSiteId.value) return
-  void loadPosts()
-})
-
-watch(totalPages, (pages) => {
-  if (currentPage.value > pages) {
-    currentPage.value = pages
-  }
-})
-
 let postsAbortController: AbortController | null = null
-
-onMounted(async () => {
-  await initializePage()
-})
-
-async function initializePage() {
-  errorMessage.value = ''
-  await loadPosts()
-}
-
-async function loadPosts() {
-  if (!activeSiteId.value) return
-  if (postsAbortController) {
-    postsAbortController.abort()
-  }
-  postsAbortController = new AbortController()
-  const { signal } = postsAbortController
-
-  isLoading.value = true
-  errorMessage.value = ''
-
-  try {
-    const data = await fetchBlogPosts(activeSiteId.value, currentPage.value, PAGE_SIZE, signal)
-    const mapped = await Promise.all(data.items.map((post) => mapToCardPost(post, activeSiteId.value, signal)))
-    if (signal.aborted) return
-
-    cachePosts(activeSiteId.value, data.items)
-    posts.value = mapped
-    totalItems.value = data.total ?? 0
-  } catch (error) {
-    if (signal.aborted) return
-    posts.value = []
-    totalItems.value = 0
-    errorMessage.value = toErrorMessage(error, 'Failed to load posts from API.')
-  } finally {
-    if (!signal.aborted) {
-      isLoading.value = false
-    }
-  }
-}
-
-async function mapToCardPost(post: BlogListPost, siteId: string, signal: AbortSignal): Promise<BlogCardPost> {
-  const imageRef = extractFirstImageRef(post)
-  let imageUrl = imageRef?.url ?? ''
-  const imageAlt = imageRef?.alt?.trim() || post.title
-
-  if (!imageUrl && imageRef?.id) {
-    try {
-      const image = await fetchBlogImage(siteId, imageRef.id, signal)
-      imageUrl = image.url
-    } catch {
-      imageUrl = ''
-    }
-  }
-
-  const createdAt = post.createdAt ?? ''
-  return {
-    id: post.id,
-    title: post.title || 'Untitled',
-    excerpt: (post.excerpt ?? '').trim() || 'No summary available.',
-    dateIso: createdAt,
-    dateLabel: formatDateLabel(createdAt),
-    category: 'Patient education',
-    imageUrl,
-    imageAlt,
-  }
-}
-
-function formatDateLabel(dateValue: string): string {
-  if (!dateValue) return 'N/A'
-  const date = new Date(dateValue)
-  if (Number.isNaN(date.getTime())) return dateValue
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  })
-    .format(date)
-    .toUpperCase()
-}
-
-function toErrorMessage(error: unknown, fallback: string): string {
-  if (error instanceof Error && error.message) {
-    return `${fallback} ${error.message}`
-  }
-  return fallback
-}
 
 function scrollCarouselIntoView() {
   carouselRef.value?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
@@ -285,87 +177,91 @@ function goToPage(page: number) {
   scrollCarouselIntoView()
 }
 
-function goPrev() {
-  goToPage(currentPage.value - 1)
+const { isDragging, dragOffsetX, onTouchStart, onTouchMove, onTouchEnd, onPointerDown, onPointerMove, onPointerUp } =
+  useBlogCarouselSwipe(
+    () => goToPage(currentPage.value - 1),
+    () => goToPage(currentPage.value + 1),
+    () => !isLoading.value && totalPages.value > 1,
+  )
+
+watch(currentPage, () => {
+  void loadPosts({ preferCache: true })
+})
+
+watch(totalPages, (pages) => {
+  if (currentPage.value > pages) {
+    currentPage.value = pages
+  }
+})
+
+onMounted(() => {
+  void loadPosts({ preferCache: true })
+})
+
+function applyImageToCard(postId: string, imageUrl: string) {
+  const target = posts.value.find((item) => item.id === postId)
+  if (target && !target.imageUrl) {
+    target.imageUrl = imageUrl
+  }
 }
 
-function goNext() {
-  goToPage(currentPage.value + 1)
+async function loadPosts(options: { silent?: boolean; preferCache?: boolean } = {}) {
+  const siteId = activeSiteId.value
+  const page = currentPage.value
+
+  if (options.preferCache) {
+    const cached = getListPageCache(siteId, page)
+    if (cached) {
+      posts.value = cached.cards
+      totalItems.value = cached.total
+      isLoading.value = false
+      errorMessage.value = ''
+      void loadPosts({ silent: true })
+      return
+    }
+  }
+
+  if (postsAbortController) {
+    postsAbortController.abort()
+  }
+  postsAbortController = new AbortController()
+  const { signal } = postsAbortController
+
+  if (!options.silent && posts.value.length === 0) {
+    isLoading.value = true
+  }
+  if (!options.silent) {
+    errorMessage.value = ''
+  }
+
+  try {
+    const data = await fetchBlogPosts(siteId, page, BLOG_LIST_PAGE_SIZE, signal)
+    if (signal.aborted) return
+
+    const cards = data.items.map(mapPostToCardSync)
+    cachePosts(siteId, data.items)
+    setListPageCache(siteId, page, { cards, total: data.total ?? 0 })
+
+    posts.value = cards
+    totalItems.value = data.total ?? 0
+
+    void enrichListCardImages(siteId, data.items, applyImageToCard, signal)
+  } catch (error) {
+    if (signal.aborted) return
+    if (!options.silent) {
+      posts.value = []
+      totalItems.value = 0
+      errorMessage.value = toBlogErrorMessage(error, 'Failed to load posts from API.')
+    }
+  } finally {
+    if (!signal.aborted) {
+      isLoading.value = false
+    }
+  }
 }
 
 function reloadCurrentPage() {
   void loadPosts()
-}
-
-/* Touch swipe */
-let touchStartX = 0
-
-function onTouchStart(event: TouchEvent) {
-  const target = event.target as HTMLElement | null
-  if (target?.closest('a,button,input,select,textarea')) return
-  touchStartX = event.touches[0]?.clientX ?? 0
-  dragOffsetX.value = 0
-  isDragging.value = true
-}
-
-function onTouchMove(event: TouchEvent) {
-  if (!isDragging.value) return
-  const x = event.touches[0]?.clientX ?? 0
-  dragOffsetX.value = x - touchStartX
-}
-
-function onTouchEnd() {
-  finishSwipe(dragOffsetX.value)
-  dragOffsetX.value = 0
-  isDragging.value = false
-}
-
-/* Pointer swipe (mouse / pen) */
-const isDragging = ref(false)
-const dragOffsetX = ref(0)
-let pointerStartX = 0
-let pointerId: number | null = null
-
-function onPointerDown(event: PointerEvent) {
-  if (event.pointerType === 'touch') return
-  const target = event.target as HTMLElement | null
-  if (target?.closest('a,button,input,select,textarea')) return
-  pointerId = event.pointerId
-  pointerStartX = event.clientX
-  dragOffsetX.value = 0
-  isDragging.value = true
-  ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
-}
-
-function onPointerMove(event: PointerEvent) {
-  if (!isDragging.value || event.pointerId !== pointerId) return
-  dragOffsetX.value = event.clientX - pointerStartX
-}
-
-function onPointerUp(event: PointerEvent) {
-  if (event.pointerId !== pointerId) return
-  try {
-    ;(event.currentTarget as HTMLElement).releasePointerCapture(event.pointerId)
-  } catch {
-    /* already released */
-  }
-  if (isDragging.value && event.pointerType !== 'touch') {
-    finishSwipe(dragOffsetX.value)
-  }
-  dragOffsetX.value = 0
-  isDragging.value = false
-  pointerId = null
-}
-
-function finishSwipe(deltaX: number) {
-  if (isLoading.value || totalPages.value <= 1) return
-  if (deltaX <= -SWIPE_THRESHOLD) {
-    goNext()
-    return
-  }
-  if (deltaX >= SWIPE_THRESHOLD) {
-    goPrev()
-  }
 }
 </script>
 
@@ -447,41 +343,6 @@ function finishSwipe(deltaX: number) {
   color: #5c6570;
 }
 
-.blog-meta-health {
-  margin-left: auto;
-  padding: 5px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.blog-meta-health.is-up {
-  background: #e6f6ec;
-  color: #18643a;
-}
-
-.blog-meta-health.is-down {
-  background: #fde8e8;
-  color: #a12828;
-}
-
-.blog-site-picker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #4b5563;
-}
-
-.blog-site-picker select {
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 6px 9px;
-  font-size: 13px;
-  color: #0f2438;
-  background: #ffffff;
-}
-
 .blog-carousel {
   position: relative;
   touch-action: pan-y;
@@ -547,19 +408,12 @@ function finishSwipe(deltaX: number) {
 
 .blog-page-enter-active,
 .blog-page-leave-active {
-  transition:
-    opacity 0.28s ease,
-    transform 0.28s ease;
+  transition: opacity 0.16s ease;
 }
 
-.blog-page-enter-from {
-  opacity: 0;
-  transform: translateX(24px);
-}
-
+.blog-page-enter-from,
 .blog-page-leave-to {
   opacity: 0;
-  transform: translateX(-24px);
 }
 
 .blog-card {
@@ -768,10 +622,6 @@ function finishSwipe(deltaX: number) {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-  }
-
-  .blog-meta-health {
-    margin-left: 0;
   }
 
   .blog-card-header {

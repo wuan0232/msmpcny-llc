@@ -2,9 +2,6 @@ const BLOG_API_BASE = (
   import.meta.env.VITE_BLOG_API_BASE ?? (import.meta.env.DEV ? '/api' : 'https://aihosthub.aihnet.com/api')
 ).replace(/\/+$/, '')
 const BLOG_API_TOKEN = import.meta.env.VITE_BLOG_API_TOKEN ?? 'local-dev-token'
-const SITE_ID_OVERRIDE = (import.meta.env.VITE_BLOG_SITE_ID ?? 'msmpcny').trim()
-
-const BLOG_API_ORIGIN = BLOG_API_BASE.replace(/\/api$/, '')
 
 type RequestInitWithSignal = RequestInit & { signal?: AbortSignal }
 
@@ -22,13 +19,6 @@ async function requestJson<T>(path: string, init: RequestInitWithSignal = {}): P
   return (await response.json()) as T
 }
 
-export interface BlogSite {
-  id: string
-  name: string
-  address: string
-  status: string
-}
-
 export interface BlogImage {
   id: string
   url: string
@@ -42,6 +32,7 @@ interface BlogImageRef {
 }
 
 interface BlogParagraph {
+  text?: string
   image?: BlogImageRef
 }
 
@@ -60,10 +51,6 @@ export interface BlogListPost {
   createdAt?: string
 }
 
-interface BlogSitesResponse {
-  sites: BlogSite[]
-}
-
 export interface BlogPostsResponse {
   items: BlogListPost[]
   total: number
@@ -71,24 +58,23 @@ export interface BlogPostsResponse {
   pageSize: number
 }
 
-interface BlogHealthResponse {
-  status: string
+const postCacheBySite = new Map<string, Map<string, BlogListPost>>()
+const imageUrlCache = new Map<string, string>()
+
+function imageCacheKey(siteId: string, imageId: string) {
+  return `${siteId}:${imageId}`
 }
 
-export async function fetchHealth(signal?: AbortSignal): Promise<BlogHealthResponse> {
-  const response = await fetch(`${BLOG_API_ORIGIN}/health`, {
-    signal,
-    headers: { Accept: 'application/json' },
-  })
-  if (!response.ok) {
-    throw new Error(`Health check failed (${response.status})`)
+export function cachePosts(siteId: string, posts: BlogListPost[]) {
+  const siteCache = postCacheBySite.get(siteId) ?? new Map<string, BlogListPost>()
+  for (const post of posts) {
+    siteCache.set(post.id, post)
   }
-  return (await response.json()) as BlogHealthResponse
+  postCacheBySite.set(siteId, siteCache)
 }
 
-export async function fetchBlogSites(signal?: AbortSignal): Promise<BlogSite[]> {
-  const data = await requestJson<BlogSitesResponse>('/blog/sites', { signal })
-  return data.sites ?? []
+export function getCachedPost(siteId: string, postId: string): BlogListPost | null {
+  return postCacheBySite.get(siteId)?.get(postId) ?? null
 }
 
 export async function fetchBlogPosts(
@@ -135,23 +121,19 @@ export async function fetchBlogImage(siteId: string, imageId: string, signal?: A
   )
 }
 
-export function pickSiteId(sites: BlogSite[], host: string): string {
-  if (SITE_ID_OVERRIDE) {
-    const forced = sites.find((site) => site.id === SITE_ID_OVERRIDE)
-    if (forced) return forced.id
-  }
+/** 带内存缓存，避免列表/详情重复请求同一张图 */
+export async function getBlogImageUrl(
+  siteId: string,
+  imageId: string,
+  signal?: AbortSignal,
+): Promise<string> {
+  const key = imageCacheKey(siteId, imageId)
+  const cached = imageUrlCache.get(key)
+  if (cached) return cached
 
-  const normalizedHost = host.toLowerCase()
-  const exactAddress = sites.find((site) => site.address.toLowerCase() === normalizedHost)
-  if (exactAddress) return exactAddress.id
-
-  const fuzzyAddress = sites.find((site) => normalizedHost.includes(site.address.toLowerCase()))
-  if (fuzzyAddress) return fuzzyAddress.id
-
-  const firstSite = sites[0]
-  if (firstSite) return firstSite.id
-
-  return ''
+  const image = await fetchBlogImage(siteId, imageId, signal)
+  imageUrlCache.set(key, image.url)
+  return image.url
 }
 
 export function extractFirstImageRef(post: BlogListPost): BlogImageRef | null {

@@ -13,7 +13,7 @@
             <button type="button" class="retry-btn" @click="loadDetail">Retry</button>
           </div>
           <article v-else-if="post" class="detail-card">
-            <p class="detail-date">{{ formatDate(post.createdAt ?? '') }}</p>
+            <p class="detail-date">{{ formatBlogDate(post.createdAt ?? '', 'detail') }}</p>
             <h1 class="detail-title">{{ post.title }}</h1>
             <p v-if="post.excerpt" class="detail-excerpt">{{ post.excerpt }}</p>
 
@@ -49,15 +49,14 @@ import { computed, onMounted, ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
-import { fetchBlogImage, findBlogPostById, type BlogListPost } from './blogApi'
-import { cachePosts, getCachedPost } from './blogState'
-
-interface SectionBlock {
-  heading: string
-  texts: string[]
-  imageUrl: string
-  imageAlt: string
-}
+import { cachePosts, findBlogPostById, getCachedPost, type BlogListPost } from './blogApi'
+import {
+  BLOG_DEFAULT_SITE_ID,
+  formatBlogDate,
+  getPostSectionBlocks,
+  hydratePostImages,
+  postNeedsImageHydration,
+} from './blogUtils'
 
 const route = useRoute()
 const post = ref<BlogListPost | null>(null)
@@ -66,7 +65,7 @@ const errorMessage = ref('')
 
 const siteId = computed(() => {
   const value = route.query.site
-  return typeof value === 'string' && value.trim() ? value.trim() : 'msmpcny'
+  return typeof value === 'string' && value.trim() ? value.trim() : BLOG_DEFAULT_SITE_ID
 })
 
 const postId = computed(() => {
@@ -74,55 +73,13 @@ const postId = computed(() => {
   return typeof value === 'string' ? value : ''
 })
 
-const sectionBlocks = computed<SectionBlock[]>(() => {
-  const current = post.value
-  if (!current) return []
-
-  const blocks: SectionBlock[] = []
-  for (const section of current.sections ?? []) {
-    const heading = (section.heading ?? '').trim()
-    const texts: string[] = []
-
-    if (section.body && section.body.trim()) {
-      texts.push(section.body.trim())
-    }
-
-    for (const paragraph of section.paragraphs ?? []) {
-      const text = ((paragraph as { text?: string }).text ?? '').trim()
-      if (text) texts.push(text)
-    }
-
-    const firstImage = (section.paragraphs ?? [])
-      .map((paragraph) => paragraph.image)
-      .find((image) => image?.url || image?.id)
-    blocks.push({
-      heading,
-      texts,
-      imageUrl: firstImage?.url ?? '',
-      imageAlt: firstImage?.alt ?? '',
-    })
-  }
-
-  if (blocks.length === 0) {
-    return [
-      {
-        heading: '',
-        texts: current.excerpt ? [current.excerpt] : ['No detail content available.'],
-        imageUrl: '',
-        imageAlt: '',
-      },
-    ]
-  }
-
-  return blocks
-})
+const sectionBlocks = computed(() => (post.value ? getPostSectionBlocks(post.value) : []))
 
 onMounted(() => {
   void loadDetail()
 })
 
 async function loadDetail() {
-  isLoading.value = true
   errorMessage.value = ''
 
   try {
@@ -131,57 +88,44 @@ async function loadDetail() {
     }
 
     let found = getCachedPost(siteId.value, postId.value)
-    if (!found) {
-      found = await findBlogPostById(siteId.value, postId.value)
-      if (found) {
-        cachePosts(siteId.value, [found])
+    if (found) {
+      post.value = found
+      isLoading.value = false
+      if (postNeedsImageHydration(found)) {
+        void hydratePostImages(found, siteId.value).then((hydrated) => {
+          if (postId.value === hydrated.id) {
+            post.value = hydrated
+          }
+        })
       }
+      return
+    }
+
+    isLoading.value = true
+    found = await findBlogPostById(siteId.value, postId.value)
+    if (found) {
+      cachePosts(siteId.value, [found])
     }
 
     if (!found) {
       throw new Error('Article not found')
     }
 
-    post.value = await hydratePostImages(found)
+    post.value = found
+    isLoading.value = false
+
+    if (postNeedsImageHydration(found)) {
+      void hydratePostImages(found, siteId.value).then((hydrated) => {
+        if (postId.value === hydrated.id) {
+          post.value = hydrated
+        }
+      })
+    }
   } catch (error) {
     post.value = null
     errorMessage.value = error instanceof Error ? error.message : 'Failed to load article.'
-  } finally {
     isLoading.value = false
   }
-}
-
-async function hydratePostImages(input: BlogListPost): Promise<BlogListPost> {
-  const clone: BlogListPost = JSON.parse(JSON.stringify(input)) as BlogListPost
-
-  for (const section of clone.sections ?? []) {
-    for (const paragraph of section.paragraphs ?? []) {
-      const image = paragraph.image
-      if (!image || image.url || !image.id) continue
-      try {
-        const details = await fetchBlogImage(siteId.value, image.id)
-        image.url = details.url
-        if (!image.alt && details.alt) {
-          image.alt = details.alt
-        }
-      } catch {
-        // Keep rendering text even if image detail request fails.
-      }
-    }
-  }
-
-  return clone
-}
-
-function formatDate(dateValue: string): string {
-  if (!dateValue) return 'N/A'
-  const date = new Date(dateValue)
-  if (Number.isNaN(date.getTime())) return dateValue
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  }).format(date)
 }
 </script>
 
