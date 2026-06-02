@@ -93,6 +93,54 @@
                 </div>
               </div>
             </article>
+
+            <article class="office-panel">
+              <div class="contact-map-wrap" aria-label="Syracuse office suite 420 map">
+                <ContactMap
+                  class="contact-map-inner"
+                  :address="syracuseSuiteOffice.address"
+                  :lat="syracuseSuiteOffice.lat"
+                  :lng="syracuseSuiteOffice.lng"
+                  :zoom="16"
+                />
+              </div>
+
+              <div class="office-content">
+                <div class="contact-grid">
+                  <div class="contact-col contact-address">
+                    <div class="address-line address-heading">Syracuse Office</div>
+                    <div class="address-line">475 Irving Ave, Suite 420, Syracuse, NY 13210</div>
+                    <div class="address-line address-spacer">
+                      <a class="email-link" href="mailto:NY@spineandneurosurgery.com">NY@spineandneurosurgery.com</a>
+                    </div>
+                    <div class="address-line">(929) 399-3134</div>
+                  </div>
+
+                  <div class="contact-col contact-hours">
+                    <h3 class="col-heading">Business Hours</h3>
+                    <div class="hours-row">
+                      <span class="hours-day">Monday - Friday</span>
+                      <span class="hours-time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="hours-day">Saturday - Sunday</span>
+                      <span class="hours-time">By appointment only</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-col contact-action">
+                    <a
+                      class="directions-button"
+                      :href="syracuseSuiteOffice.directionsUrl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get Directions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -129,6 +177,15 @@ const nycOffice = {
   lng: NYC_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(NYC_CLINIC_ADDRESS),
 }
+
+const syracuseSuiteOfficeAddress = '475 Irving Ave, Suite 420, Syracuse, NY 13210'
+
+const syracuseSuiteOffice = {
+  address: syracuseSuiteOfficeAddress,
+  lat: SYRACUSE_CLINIC_LAT,
+  lng: SYRACUSE_CLINIC_LNG,
+  directionsUrl: googleMapsSearchUrl(syracuseSuiteOfficeAddress),
+}
 </script>
 
 <style scoped>
@@ -152,7 +209,7 @@ const nycOffice = {
 
 .offices-layout {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   align-items: stretch;
 }
@@ -295,7 +352,11 @@ const nycOffice = {
 }
 
 @media (max-width: 900px) {
-  .offices-layout,
+  .offices-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 20px;

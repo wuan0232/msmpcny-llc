@@ -45,6 +45,12 @@
               <div>Flushing, NY</div>
               <div>(929) 399-3134</div>
             </div>
+            <div class="footer-address footer-address-right">
+              <div class="footer-address-title">Syracuse Office</div>
+              <div>475 Irving Ave, Suite 420</div>
+              <div>Syracuse, NY 13210</div>
+              <div>(929) 399-3134</div>
+            </div>
           </div>
 
           <img
@@ -193,7 +199,7 @@ const directionsUrl = googleMapsDirectionsUrl()
 
 .footer-contact-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px 20px;
   align-items: start;
   margin-bottom: 16px;
