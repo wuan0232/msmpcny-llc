@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" pages="3">
   <diagram name="1-核心业务闭环总览" id="pMeGg8yc6MK4xjdVaP0V">
-    <mxGraphModel dx="1207" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,28 +10,28 @@
         <mxCell id="o_nav" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="全局导航 NavBar&#xa;Home / Services / Patient Forms&#xa;About / Contact / Blog" vertex="1">
           <mxGeometry height="80" width="280" x="640" y="150" as="geometry" />
         </mxCell>
-        <mxCell id="o_home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="首页 HomeView&#xa;Hero + 服务介绍 + 医生介绍&#xa;视频 + 预约电话条" vertex="1">
+        <mxCell id="o_home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="首页 HomeView&#xa;Hero + 服务介绍 + 医生介绍&#xa;视频 + 预约电话条" vertex="1">
           <mxGeometry height="90" width="280" x="640" y="270" as="geometry" />
         </mxCell>
-        <mxCell id="o_intent" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="用户意图?" vertex="1">
+        <mxCell id="o_intent" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="用户意图?" vertex="1">
           <mxGeometry height="100" width="180" x="690" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="o_services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Services 服务页&#xa;→ 6 个子服务详情页&#xa;(Prolotherapy/PRP/Prolozone等)" vertex="1">
+        <mxCell id="o_services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Services 服务页&#xa;→ 6 个子服务详情页&#xa;(Prolotherapy/PRP/Prolozone等)" vertex="1">
           <mxGeometry height="90" width="260" x="36" y="720" as="geometry" />
         </mxCell>
-        <mxCell id="o_blog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Blog 科普阅读&#xa;列表 → 详情 → 返回" vertex="1">
+        <mxCell id="o_blog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Blog 科普阅读&#xa;列表 → 详情 → 返回" vertex="1">
           <mxGeometry height="90" width="220" x="386" y="623" as="geometry" />
         </mxCell>
-        <mxCell id="o_contact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Contact 联系页&#xa;3 个 Office + 地图 + 导航" vertex="1">
+        <mxCell id="o_contact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Contact 联系页&#xa;3 个 Office + 地图 + 导航" vertex="1">
           <mxGeometry height="90" width="240" x="660" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="o_forms" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Patient Forms&#xa;下载/填写患者表单" vertex="1">
+        <mxCell id="o_forms" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Patient Forms&#xa;下载/填写患者表单" vertex="1">
           <mxGeometry height="90" width="220" x="1028" y="623" as="geometry" />
         </mxCell>
-        <mxCell id="o_about" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="About 关于医生/诊所" vertex="1">
+        <mxCell id="o_about" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="About 关于医生/诊所" vertex="1">
           <mxGeometry height="90" width="200" x="1248" y="720" as="geometry" />
         </mxCell>
-        <mxCell id="o_cta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="转化动作 CTA&#xa;tel:(929)399-3134&#xa;Google Maps 导航&#xa;阅读完成/了解服务" vertex="1">
+        <mxCell id="o_cta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="转化动作 CTA&#xa;tel:(929)399-3134&#xa;Google Maps 导航&#xa;阅读完成/了解服务" vertex="1">
           <mxGeometry height="90" width="320" x="620" y="720" as="geometry" />
         </mxCell>
         <mxCell id="o_footer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="SiteFooter 页脚&#xa;Quick Links + 地图 + 3 地址" vertex="1">
@@ -86,7 +86,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="2-Blog阅读业务闭环" id="hsWz5fIpGE5k_rh_jmd5">
-    <mxGraphModel dx="1300" dy="897" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
