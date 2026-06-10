@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="7">
+<mxfile host="app.diagrams.net" pages="8">
   <diagram name="1-核心业务闭环总览" id="pMeGg8yc6MK4xjdVaP0V">
     <mxGraphModel dx="1408" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
@@ -637,6 +637,236 @@
         </mxCell>
         <mxCell id="4G5mo6yRYO0cKIpUiiYN-78" edge="1" parent="1" source="4G5mo6yRYO0cKIpUiiYN-58" style="endArrow=block" target="4G5mo6yRYO0cKIpUiiYN-59" value="">
           <mxGeometry as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="FyUACcXPoJztcj36IZ7p" name="第 8 页">
+    <mxGraphModel dx="1408" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-2" parent="1" style="text;fontSize=18;fontWeight=bold;stroke=none;fill=none" value="ConcordHousingLLC 用户角色与权限矩阵" vertex="1">
+          <mxGeometry height="40" width="700" x="920" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-3" parent="1" style="text;fillColor=#f0f0f0" value="说明：纯前端网站，无登录、无账号、无权限体系；全站功能公开。公司运营/管理员为线下角色，系统内无操作入口" vertex="1">
+          <mxGeometry height="30" width="1000" x="770" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-4" parent="1" style="text;fillColor=#f0f0f0" value="图例：✅ 可用  ❌ 不可用/未实现  — 系统外不适用" vertex="1">
+          <mxGeometry height="30" width="380" x="1820" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-5" parent="1" style="rectangle;fillColor=#e6e6e6" value="功能/页面分类" vertex="1">
+          <mxGeometry height="40" width="320" x="400" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-6" parent="1" style="rectangle;fillColor=#e6e6e6" value="匿名访客" vertex="1">
+          <mxGeometry height="40" width="260" x="720" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-7" parent="1" style="rectangle;fillColor=#e6e6e6" value="潜在租客" vertex="1">
+          <mxGeometry height="40" width="260" x="980" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-8" parent="1" style="rectangle;fillColor=#e6e6e6" value="公司运营人员" vertex="1">
+          <mxGeometry height="40" width="260" x="1240" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-9" parent="1" style="rectangle;fillColor=#e6e6e6" value="超级管理员" vertex="1">
+          <mxGeometry height="40" width="260" x="1500" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-10" edge="1" parent="1" style="endArrow=none;strokeWidth=2" value="">
+          <mxGeometry width="1360" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-11" parent="1" style="rectangle" value="首页 /" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-12" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-13" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-14" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-15" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-16" parent="1" style="rectangle;fillColor=#f8f8f8" value="地点列表 /location" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-17" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-18" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-19" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-20" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="673" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-21" parent="1" style="rectangle" value="地点详情 /location/:slug" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-22" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-23" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-24" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-25" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-26" parent="1" style="rectangle;fillColor=#f8f8f8" value="Syracuse 各房型子页" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-27" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-28" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-29" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-30" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="743" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-31" parent="1" style="rectangle" value="租赁申请/博客/文档/联系页" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-32" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-33" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-34" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-35" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-36" edge="1" parent="1" style="endArrow=none;strokeWidth=2" value="">
+          <mxGeometry width="1360" x="30" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-37" parent="1" style="rectangle;fillColor=#f8f8f8" value="菜单跳转、轮播、图片弹窗、地区链接" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="823" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-38" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="823" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-39" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="823" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-40" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="823" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-41" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="823" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-42" parent="1" style="rectangle" value="地图嵌入、社交外链、电话/邮箱" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-43" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-44" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-45" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-46" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-47" edge="1" parent="1" style="endArrow=none;strokeWidth=2" value="">
+          <mxGeometry width="1360" x="30" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-48" parent="1" style="rectangle;fillColor=#f8f8f8" value="租赁/联系/房型表单提交" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="903" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-49" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="903" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-50" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="903" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-51" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="903" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-52" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="903" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-53" parent="1" style="rectangle" value="公开PDF文件下载" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-54" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-55" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-56" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-57" parent="1" style="rectangle" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="938" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-58" edge="1" parent="1" style="endArrow=none;strokeWidth=2" value="">
+          <mxGeometry width="1360" x="30" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-59" parent="1" style="rectangle;fillColor=#f8f8f8" value="城市/房型跳转按钮" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="983" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-60" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="983" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-61" parent="1" style="rectangle;fillColor=#f8f8f8" value="✅" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="983" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-62" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="983" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-63" parent="1" style="rectangle;fillColor=#f8f8f8" value="—" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="983" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-64" edge="1" parent="1" style="endArrow=none;strokeWidth=2" value="">
+          <mxGeometry width="1360" x="30" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-65" parent="1" style="rectangle" value="注册/登录/个人中心" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-66" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-67" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-68" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-69" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-70" parent="1" style="rectangle;fillColor=#f8f8f8" value="后台管理、内容编辑、数据审核" vertex="1">
+          <mxGeometry height="35" width="320" x="400" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-71" parent="1" style="rectangle;fillColor=#f8f8f8" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="720" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-72" parent="1" style="rectangle;fillColor=#f8f8f8" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="980" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-73" parent="1" style="rectangle;fillColor=#f8f8f8" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="1240" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-74" parent="1" style="rectangle;fillColor=#f8f8f8" value="❌" vertex="1">
+          <mxGeometry height="35" width="260" x="1500" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="Uas57iKbo1_JPp-NGBQT-75" parent="1" style="text;fillColor=#f0f0f0" value="角色说明：1.匿名访客/潜在租客权限完全一致，仅业务行为不同；2.公司运营、超级管理员为线下角色，系统无对应功能与账号" vertex="1">
+          <mxGeometry height="30" width="1360" x="400" y="1118" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
