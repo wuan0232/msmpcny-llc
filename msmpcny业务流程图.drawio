@@ -931,10 +931,10 @@
           <mxGeometry height="40" width="160" x="344" y="1249" as="geometry" />
         </mxCell>
         <mxCell id="O0sEURei1BYRebPoDpqu-20" parent="1" style="rhombus" value="还有未完成任务？" vertex="1">
-          <mxGeometry height="50" width="100" x="198" y="1081" as="geometry" />
+          <mxGeometry height="64" width="116" x="185" y="1074" as="geometry" />
         </mxCell>
         <mxCell id="O0sEURei1BYRebPoDpqu-21" parent="1" style="rectangle" value="状态：已完成" vertex="1">
-          <mxGeometry height="40" width="120" x="188" y="1353" as="geometry" />
+          <mxGeometry height="40" width="120" x="190" y="1350" as="geometry" />
         </mxCell>
         <mxCell id="O0sEURei1BYRebPoDpqu-22" parent="1" style="rectangle" value="医生发起复诊登记" vertex="1">
           <mxGeometry height="40" width="140" x="119" y="964" as="geometry" />
