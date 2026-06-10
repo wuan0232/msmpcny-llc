@@ -1009,10 +1009,187 @@
     </mxGraphModel>
   </diagram>
   <diagram id="0M83kBoGIHwxMrSDSRQ0" name="第 10 页">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1207" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-83" parent="1" style="text;align=center" value="AicaseManagement - 角色与权限矩阵" vertex="1">
+          <mxGeometry height="30" width="700" x="844" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-84" parent="1" style="rectangle" value="系统角色：访客(未登录)、医生、患者；核验操作员为业务子角色，无登录入口" vertex="1">
+          <mxGeometry height="30" width="900" x="751" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-85" parent="1" style="rectangle" value="功能/页面" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-86" parent="1" style="rectangle" value="访客" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-87" parent="1" style="rectangle" value="医生" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-88" parent="1" style="rectangle" value="患者" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-89" parent="1" style="rectangle" value="登录页 /login" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-90" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-91" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-92" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-93" parent="1" style="rectangle" value="仪表盘 /" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-94" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-95" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-96" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-97" parent="1" style="rectangle" value="患者管理 /patients" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-98" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-99" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-100" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-101" parent="1" style="rectangle" value="诊疗任务 /tasks" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-102" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-103" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-104" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-105" parent="1" style="rectangle" value="个人信息 /patient-self" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-106" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-107" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-108" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-109" parent="1" style="rectangle" value="侧栏导航、语言/导出/退出" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-110" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-111" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-112" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-113" parent="1" style="rectangle" value="患者管理、任务核验（读写）" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="718" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-114" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="718" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-115" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="718" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-116" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="718" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-117" parent="1" style="rectangle" value="查看本人信息（只读）" vertex="1">
+          <mxGeometry height="35" width="220" x="688" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-118" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="908" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-119" parent="1" style="rectangle" value="❌" vertex="1">
+          <mxGeometry height="35" width="140" x="1048" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-120" parent="1" style="rectangle" value="✅" vertex="1">
+          <mxGeometry height="35" width="140" x="1188" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-121" parent="1" style="text" value="核验操作员（子角色）" vertex="1">
+          <mxGeometry height="30" width="200" x="1378" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-122" parent="1" style="rectangle" value="操作员" vertex="1">
+          <mxGeometry height="30" width="120" x="1378" y="473" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-123" parent="1" style="rectangle" value="PIN码" vertex="1">
+          <mxGeometry height="30" width="80" x="1498" y="473" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-124" parent="1" style="rectangle" value="负责任务" vertex="1">
+          <mxGeometry height="30" width="120" x="1578" y="473" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-125" parent="1" style="rectangle" value="DOC_01" vertex="1">
+          <mxGeometry height="30" width="120" x="1378" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-126" parent="1" style="rectangle" value="1234" vertex="1">
+          <mxGeometry height="30" width="80" x="1498" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-127" parent="1" style="rectangle" value="处方" vertex="1">
+          <mxGeometry height="30" width="120" x="1578" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-128" parent="1" style="rectangle" value="IMG_01" vertex="1">
+          <mxGeometry height="30" width="120" x="1378" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-129" parent="1" style="rectangle" value="1234" vertex="1">
+          <mxGeometry height="30" width="80" x="1498" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-130" parent="1" style="rectangle" value="影像" vertex="1">
+          <mxGeometry height="30" width="120" x="1578" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-131" parent="1" style="rectangle" value="PHY_01" vertex="1">
+          <mxGeometry height="30" width="120" x="1378" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-132" parent="1" style="rectangle" value="1234" vertex="1">
+          <mxGeometry height="30" width="80" x="1498" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-133" parent="1" style="rectangle" value="理疗" vertex="1">
+          <mxGeometry height="30" width="120" x="1578" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-134" parent="1" style="text" value="四重核验流程" vertex="1">
+          <mxGeometry height="30" width="150" x="1378" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-135" parent="1" style="rectangle" value="1.PIN码校验" vertex="1">
+          <mxGeometry height="30" width="150" x="1378" y="663" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-136" parent="1" style="rectangle" value="2.就诊码匹配" vertex="1">
+          <mxGeometry height="30" width="150" x="1378" y="698" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-137" parent="1" style="rectangle" value="3.位置权限校验" vertex="1">
+          <mxGeometry height="30" width="150" x="1378" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-138" parent="1" style="rectangle" value="4.GPS地理围栏校验" vertex="1">
+          <mxGeometry height="30" width="150" x="1378" y="768" as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-139" edge="1" parent="1" source="kvWwDCgEjm5kIQyiWjDB-135" style="endArrow=block" target="kvWwDCgEjm5kIQyiWjDB-136" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-140" edge="1" parent="1" source="kvWwDCgEjm5kIQyiWjDB-136" style="endArrow=block" target="kvWwDCgEjm5kIQyiWjDB-137" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="kvWwDCgEjm5kIQyiWjDB-141" edge="1" parent="1" source="kvWwDCgEjm5kIQyiWjDB-137" style="endArrow=block" target="kvWwDCgEjm5kIQyiWjDB-138" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
