@@ -316,12 +316,12 @@
     </mxGraphModel>
   </diagram>
   <diagram name="2-页面与功能权限矩阵" id="bRlYLJFc10UDF04CxGXH">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="3208" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="p_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" value="页面 × 角色 权限矩阵（✅=允许  ❌=不存在/无权限  ⚙=系统外平台）" vertex="1">
-          <mxGeometry height="40" width="1200" x="200" y="20" as="geometry" />
+          <mxGeometry height="40" width="1200" x="-30" y="28" as="geometry" />
         </mxCell>
         <mxCell id="p_h0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#666666;fontColor=#ffffff;fontStyle=1;align=center;" value="页面 / 功能" vertex="1">
           <mxGeometry height="40" width="320" x="60" y="80" as="geometry" />
@@ -335,12 +335,6 @@
         <mxCell id="p_h3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9673a6;fontColor=#ffffff;fontStyle=1;align=center;" value="开发/运维&#xa;(DevOps)" vertex="1">
           <mxGeometry height="40" width="160" x="700" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="p_h4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b85450;fontColor=#ffffff;fontStyle=1;align=center;" value="商家" vertex="1">
-          <mxGeometry height="40" width="120" x="860" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="p_h5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b85450;fontColor=#ffffff;fontStyle=1;align=center;" value="超级管理员&#xa;(本系统内)" vertex="1">
-          <mxGeometry height="40" width="160" x="980" y="80" as="geometry" />
-        </mxCell>
         <mxCell id="p_r1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/  首页 Home" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="120" as="geometry" />
         </mxCell>
@@ -352,12 +346,6 @@
         </mxCell>
         <mxCell id="p_r1c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 部署" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="120" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r1d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="120" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r1e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="120" as="geometry" />
         </mxCell>
         <mxCell id="p_r2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/services + 6 个子服务页" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="156" as="geometry" />
@@ -371,12 +359,6 @@
         <mxCell id="p_r2c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 部署" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="156" as="geometry" />
         </mxCell>
-        <mxCell id="p_r2d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="156" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r2e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="156" as="geometry" />
-        </mxCell>
         <mxCell id="p_r3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/about  关于" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="192" as="geometry" />
         </mxCell>
@@ -388,12 +370,6 @@
         </mxCell>
         <mxCell id="p_r3c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 改代码" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="192" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r3d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="192" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r3e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="192" as="geometry" />
         </mxCell>
         <mxCell id="p_r4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/contact  联系页(3 Office+地图)" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="228" as="geometry" />
@@ -407,12 +383,6 @@
         <mxCell id="p_r4c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 改地址配置" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="228" as="geometry" />
         </mxCell>
-        <mxCell id="p_r4d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="228" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r4e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="228" as="geometry" />
-        </mxCell>
         <mxCell id="p_r5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/patient-forms  患者表单" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="264" as="geometry" />
         </mxCell>
@@ -424,12 +394,6 @@
         </mxCell>
         <mxCell id="p_r5c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 改代码" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="264" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r5d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="264" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r5e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="264" as="geometry" />
         </mxCell>
         <mxCell id="p_r6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/blog  列表(分页/滑动)" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="300" as="geometry" />
@@ -443,12 +407,6 @@
         <mxCell id="p_r6c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ API配置" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="p_r6d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="300" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r6e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="300" as="geometry" />
-        </mxCell>
         <mxCell id="p_r7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/blog/:postId  详情" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="336" as="geometry" />
         </mxCell>
@@ -460,12 +418,6 @@
         </mxCell>
         <mxCell id="p_r7c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;align=center;" value="—" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="336" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r7d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="336" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r7e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="336" as="geometry" />
         </mxCell>
         <mxCell id="p_r8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="全局：NavBar / SiteFooter" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="372" as="geometry" />
@@ -479,12 +431,6 @@
         <mxCell id="p_r8c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;align=center;" value="⚙ 改组件" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="372" as="geometry" />
         </mxCell>
-        <mxCell id="p_r8d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="372" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r8e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="372" as="geometry" />
-        </mxCell>
         <mxCell id="p_r9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="转化动作：tel:(929)399-3134" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="408" as="geometry" />
         </mxCell>
@@ -496,12 +442,6 @@
         </mxCell>
         <mxCell id="p_r9c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;align=center;" value="—" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="408" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r9d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="408" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r9e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="408" as="geometry" />
         </mxCell>
         <mxCell id="p_r10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="转化动作：Google Maps 导航" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="444" as="geometry" />
@@ -515,12 +455,6 @@
         <mxCell id="p_r10c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;align=center;" value="—" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="444" as="geometry" />
         </mxCell>
-        <mxCell id="p_r10d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="444" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r10e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="444" as="geometry" />
-        </mxCell>
         <mxCell id="p_r11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;fontStyle=1" value="登录 / 注册 / 个人中心" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="480" as="geometry" />
         </mxCell>
@@ -533,12 +467,6 @@
         <mxCell id="p_r11c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="480" as="geometry" />
         </mxCell>
-        <mxCell id="p_r11d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="480" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r11e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="480" as="geometry" />
-        </mxCell>
         <mxCell id="p_r12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;fontStyle=1" value="管理后台 / 商家后台" vertex="1">
           <mxGeometry height="36" width="320" x="60" y="516" as="geometry" />
         </mxCell>
@@ -550,15 +478,6 @@
         </mxCell>
         <mxCell id="p_r12c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;align=center;" value="—" vertex="1">
           <mxGeometry height="36" width="160" x="700" y="516" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r12d" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="120" x="860" y="516" as="geometry" />
-        </mxCell>
-        <mxCell id="p_r12e" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=center;" value="❌" vertex="1">
-          <mxGeometry height="36" width="160" x="980" y="516" as="geometry" />
-        </mxCell>
-        <mxCell id="p_legend" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=10;" value="符号说明&#xa;✅ = 本系统内允许  ❌ = 角色/功能不存在  ⚙ = 在系统外平台或代码层操作  — = 不涉及" vertex="1">
-          <mxGeometry height="70" width="400" x="60" y="580" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
