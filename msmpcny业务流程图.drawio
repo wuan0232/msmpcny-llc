@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="9">
+<mxfile host="app.diagrams.net" pages="10">
   <diagram name="1-核心业务闭环总览" id="pMeGg8yc6MK4xjdVaP0V">
     <mxGraphModel dx="1408" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
@@ -872,7 +872,144 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rEOpXnu8jYuEL-L6VTOv" name="第 9 页">
-    <mxGraphModel dx="402" dy="278" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="845" dy="583" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O0sEURei1BYRebPoDpqu-3" parent="1" style="text;align=center;fontSize=16;fontWeight=bold" value="MedVerify 智能诊疗核验系统 核心业务流程图" vertex="1">
+          <mxGeometry height="30" width="550" x="227" y="688" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-4" parent="1" style="rectangle" value="图例：圆角框=开始/结束 矩形=业务操作 菱形=判断分支" vertex="1">
+          <mxGeometry height="40" width="260" x="1107" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-5" parent="1" style="rectangle" value="四重核验：PIN码、就诊码、位置、权限+GPS围栏" vertex="1">
+          <mxGeometry height="40" width="280" x="604" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-6" parent="1" style="terminator" value="开始" vertex="1">
+          <mxGeometry height="40" width="100" x="537" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-7" parent="1" style="rectangle" value="用户登录（医生/患者账号）" vertex="1">
+          <mxGeometry height="40" width="160" x="507" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-8" parent="1" style="rhombus" value="角色？" vertex="1">
+          <mxGeometry height="50" width="80" x="547" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-9" parent="1" style="rectangle" value="【医生】患者登记" vertex="1">
+          <mxGeometry height="40" width="140" x="375" y="897" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-10" parent="1" style="rectangle" value="生成账号/就诊码 状态：候诊中" vertex="1">
+          <mxGeometry height="40" width="180" x="355" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-11" parent="1" style="rectangle" value="自动创建处方待办任务" vertex="1">
+          <mxGeometry height="40" width="160" x="365" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-52" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" target="O0sEURei1BYRebPoDpqu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-12" parent="1" style="rectangle" value="打开任务 执行并核验" vertex="1">
+          <mxGeometry height="40" width="160" x="365" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-13" parent="1" style="rectangle" value="三步录入：信息→结果→核验" vertex="1">
+          <mxGeometry height="40" width="160" x="365" y="1152" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-14" parent="1" style="rectangle" value="执行四重核验" vertex="1">
+          <mxGeometry height="40" width="120" x="575" y="1152" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-15" parent="1" style="rhombus" value="核验通过？" vertex="1">
+          <mxGeometry height="50" width="80" x="707" y="1081" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-16" parent="1" style="rhombus" value="任务类型？" vertex="1">
+          <mxGeometry height="50" width="80" x="707" y="1244" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-17" parent="1" style="rectangle" value="状态：治疗中" vertex="1">
+          <mxGeometry height="40" width="120" x="687" y="1369" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-18" parent="1" style="rectangle" value="自动派发影像/理疗任务" vertex="1">
+          <mxGeometry height="40" width="160" x="347" y="1369" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-19" parent="1" style="rectangle" value="影像/理疗任务 执行核验" vertex="1">
+          <mxGeometry height="40" width="160" x="344" y="1249" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-20" parent="1" style="rhombus" value="还有未完成任务？" vertex="1">
+          <mxGeometry height="50" width="100" x="198" y="1081" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-21" parent="1" style="rectangle" value="状态：已完成" vertex="1">
+          <mxGeometry height="40" width="120" x="188" y="1353" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-22" parent="1" style="rectangle" value="医生发起复诊登记" vertex="1">
+          <mxGeometry height="40" width="140" x="119" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-23" parent="1" style="rectangle" value="【患者】查看就诊卡/时间轴" vertex="1">
+          <mxGeometry height="40" width="200" x="637" y="922" as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-24" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-6" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-7" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-25" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-7" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-8" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-26" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-8" style="endArrow=block;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="O0sEURei1BYRebPoDpqu-9" value="医生">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-27" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-8" style="endArrow=block;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="O0sEURei1BYRebPoDpqu-23" value="患者">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-28" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-9" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-10" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-29" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-10" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-11" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-30" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-11" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-12" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-31" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-12" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-13" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-32" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-13" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-14" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-33" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-14" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-15" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-34" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-15" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-12" value="否(重试)">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-35" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-15" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-16" value="是">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-36" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-16" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-17" value="处方">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-37" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-16" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-19" value="影像/理疗">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-38" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-17" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-18" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-39" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-18" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-19" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-40" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-19" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-20" value="">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-41" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-20" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-12" value="是">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-42" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-20" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-21" value="否">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-44" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-22" style="endArrow=block" target="O0sEURei1BYRebPoDpqu-10" value="复诊循环">
+          <mxGeometry as="geometry" />
+        </mxCell>
+        <mxCell id="O0sEURei1BYRebPoDpqu-51" edge="1" parent="1" source="O0sEURei1BYRebPoDpqu-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.355;entryY=0.969;entryDx=0;entryDy=0;entryPerimeter=0;" target="O0sEURei1BYRebPoDpqu-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="0M83kBoGIHwxMrSDSRQ0" name="第 10 页">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
