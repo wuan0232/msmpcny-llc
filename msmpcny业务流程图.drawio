@@ -321,7 +321,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="p_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" value="页面 × 角色 权限矩阵（✅=允许  ❌=不存在/无权限  ⚙=系统外平台）" vertex="1">
-          <mxGeometry height="40" width="1200" x="-30" y="28" as="geometry" />
+          <mxGeometry height="40" width="1200" x="-105" y="28" as="geometry" />
         </mxCell>
         <mxCell id="p_h0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#666666;fontColor=#ffffff;fontStyle=1;align=center;" value="页面 / 功能" vertex="1">
           <mxGeometry height="40" width="320" x="60" y="80" as="geometry" />
@@ -332,7 +332,7 @@
         <mxCell id="p_h2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d6b656;fontColor=#ffffff;fontStyle=1;align=center;" value="内容管理员&#xa;(AIHostHub)" vertex="1">
           <mxGeometry height="40" width="160" x="540" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="p_h3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9673a6;fontColor=#ffffff;fontStyle=1;align=center;" value="开发/运维&#xa;(DevOps)" vertex="1">
+        <mxCell id="p_h3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9673a6;fontColor=#ffffff;fontStyle=1;align=center;" value="开发(developer)" vertex="1">
           <mxGeometry height="40" width="160" x="700" y="80" as="geometry" />
         </mxCell>
         <mxCell id="p_r1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=8;" value="/  首页 Home" vertex="1">
@@ -483,48 +483,45 @@
     </mxGraphModel>
   </diagram>
   <diagram name="3-操作权限明细" id="oJOEYIXHzrfdamEhkbB5">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1127" dy="777" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="a_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="各角色可执行操作明细" vertex="1">
-          <mxGeometry height="40" width="600" x="400" y="20" as="geometry" />
+          <mxGeometry height="40" width="600" x="231" y="19" as="geometry" />
         </mxCell>
         <mxCell id="a_lane1" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;startSize=30;" value="匿名访客 (Public Visitor)" vertex="1">
           <mxGeometry height="380" width="460" x="60" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="a1" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;align=left;spacingLeft=10;" value="可读操作&#xa;• 浏览全部 12 条公开页面&#xa;• 阅读 Blog 列表与详情&#xa;• Blog 分页 / 滑动翻页&#xa;• 观看服务介绍视频&#xa;• 查看 Contact 地图与 3 个 Office&#xa;• 查看/下载 Patient Forms" vertex="1">
+        <mxCell id="a1" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="可读操作&#xa;• 浏览全部 12 条公开页面&#xa;• 阅读 Blog 列表与详情&#xa;• Blog 分页 / 滑动翻页&#xa;• 观看服务介绍视频&#xa;• 查看 Contact 地图与 3 个 Office&#xa;• 查看/下载 Patient Forms" vertex="1">
           <mxGeometry height="120" width="420" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="a2" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;align=left;spacingLeft=10;" value="可执行动作&#xa;• 点击 tel: 拨打电话 (929) 399-3134&#xa;• 点击 Get Directions 跳转 Google Maps&#xa;• 点击 NavBar/Footer 导航跳转&#xa;• 点击 Read article details 进入详情" vertex="1">
-          <mxGeometry height="100" width="420" x="20" y="190" as="geometry" />
+        <mxCell id="a2" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="可执行动作&#xa;• 点击 tel: 拨打电话 (929) 399-3134&#xa;• 点击 Get Directions 跳转 Google Maps&#xa;• 点击 NavBar/Footer 导航跳转&#xa;• 点击 Read article details 进入详情" vertex="1">
+          <mxGeometry height="100" width="420" x="20" y="178" as="geometry" />
         </mxCell>
-        <mxCell id="a3" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=left;spacingLeft=10;" value="禁止操作&#xa;• 登录/注册&#xa;• 编辑/发布/删除文章&#xa;• 修改联系地址/页面内容&#xa;• 访问任何管理后台" vertex="1">
-          <mxGeometry height="60" width="420" x="20" y="310" as="geometry" />
+        <mxCell id="a3" parent="a_lane1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="禁止操作&#xa;• 登录/注册&#xa;• 编辑/发布/删除文章&#xa;• 修改联系地址/页面内容&#xa;• 访问任何管理后台" vertex="1">
+          <mxGeometry height="75" width="420" x="16" y="292" as="geometry" />
         </mxCell>
         <mxCell id="a_lane2" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;startSize=30;" value="内容管理员 (AIHostHub 平台)" vertex="1">
           <mxGeometry height="380" width="460" x="560" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="b1" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;align=left;spacingLeft=10;" value="可管理内容 (不在本官网 UI)&#xa;• 在 AIHostHub 发布/编辑/下架 Blog&#xa;• 上传文章配图&#xa;• 管理 msmpcny 站点文章" vertex="1">
+        <mxCell id="b1" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="可管理内容 (不在本官网 UI)&#xa;• 在 AIHostHub 发布/编辑/下架 Blog&#xa;• 上传文章配图&#xa;• 管理 msmpcny 站点文章" vertex="1">
           <mxGeometry height="90" width="420" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="b2" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=left;spacingLeft=10;" value="不可在本项目操作&#xa;• 不能改 Contact 地址 (需改代码)&#xa;• 不能改 Services 静态页内容&#xa;• 不能登录 msmpcny 官网后台 (不存在)" vertex="1">
+        <mxCell id="b2" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="不可在本项目操作&#xa;• 不能改 Contact 地址 (需改代码)&#xa;• 不能改 Services 静态页内容&#xa;• 不能登录 msmpcny 官网后台 (不存在)" vertex="1">
           <mxGeometry height="80" width="420" x="20" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="b3" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;align=left;spacingLeft=10;" value="数据流向&#xa;AIHostHub 后台 → Blog API → 官网只读展示" vertex="1">
+        <mxCell id="b3" parent="a_lane2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="数据流向&#xa;AIHostHub 后台 → Blog API → 官网只读展示" vertex="1">
           <mxGeometry height="60" width="420" x="20" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="a_lane3" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;startSize=30;" value="开发/运维 (Developer / DevOps)" vertex="1">
+        <mxCell id="a_lane3" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;startSize=30;" value="开发(Developer)" vertex="1">
           <mxGeometry height="200" width="960" x="60" y="500" as="geometry" />
         </mxCell>
-        <mxCell id="c1" parent="a_lane3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;align=left;spacingLeft=10;" value="代码/部署权限&#xa;• 修改 Vue 组件、路由、样式&#xa;• 修改 Contact/Footer 地址 (clinicLocation.ts / ContactSection.vue)&#xa;• 配置 VITE_BLOG_API_BASE / VITE_BLOG_API_TOKEN&#xa;• Vite 开发代理 / 生产构建部署" vertex="1">
+        <mxCell id="c1" parent="a_lane3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="代码/部署权限&#xa;• 修改 Vue 组件、路由、样式&#xa;• 修改 Contact/Footer 地址 (clinicLocation.ts / ContactSection.vue)&#xa;• 配置 VITE_BLOG_API_BASE / VITE_BLOG_API_TOKEN&#xa;• Vite 开发代理 / 生产构建部署" vertex="1">
           <mxGeometry height="120" width="460" x="20" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="c2" parent="a_lane3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;align=left;spacingLeft=10;" value="不在网站 UI 内&#xa;• 无登录入口&#xa;• 权限通过 Git/服务器/CI 控制&#xa;• Blog API Token 由环境变量注入，非用户登录态" vertex="1">
+        <mxCell id="c2" parent="a_lane3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;align=left;spacingLeft=10;fontColor=#333333;strokeColor=#666666;" value="不在网站 UI 内&lt;br&gt;• 无登录入口&lt;br&gt;• 权限通过 Git/服务器&lt;br&gt;• Blog API Token 由环境变量注入，非用户登录态" vertex="1">
           <mxGeometry height="120" width="440" x="500" y="50" as="geometry" />
-        </mxCell>
-        <mxCell id="a_norole" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=10;fontStyle=1" value="本系统内不存在的角色：商家 / 超级管理员 / 普通注册用户&#xa;原因：无 auth 模块、无 router.beforeEach 守卫、无后台路由" vertex="1">
-          <mxGeometry height="50" width="960" x="60" y="740" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
