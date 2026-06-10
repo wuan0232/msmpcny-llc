@@ -1,9 +1,327 @@
-<mxfile host="app.diagrams.net">
-  <diagram name="第 1 页" id="PCDGOMUGKFwn5PcH7WWm">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" pages="3">
+  <diagram name="1-核心业务闭环总览" id="pMeGg8yc6MK4xjdVaP0V">
+    <mxGraphModel dx="1207" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="o_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="开始&#xa;用户访问 msmpcny 官网" vertex="1">
+          <mxGeometry height="70" width="200" x="680" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="o_nav" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="全局导航 NavBar&#xa;Home / Services / Patient Forms&#xa;About / Contact / Blog" vertex="1">
+          <mxGeometry height="80" width="280" x="640" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="o_home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="首页 HomeView&#xa;Hero + 服务介绍 + 医生介绍&#xa;视频 + 预约电话条" vertex="1">
+          <mxGeometry height="90" width="280" x="640" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="o_intent" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="用户意图?" vertex="1">
+          <mxGeometry height="100" width="180" x="690" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="o_services" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Services 服务页&#xa;→ 6 个子服务详情页&#xa;(Prolotherapy/PRP/Prolozone等)" vertex="1">
+          <mxGeometry height="90" width="260" x="36" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="o_blog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Blog 科普阅读&#xa;列表 → 详情 → 返回" vertex="1">
+          <mxGeometry height="90" width="220" x="386" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="o_contact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Contact 联系页&#xa;3 个 Office + 地图 + 导航" vertex="1">
+          <mxGeometry height="90" width="240" x="660" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="o_forms" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Patient Forms&#xa;下载/填写患者表单" vertex="1">
+          <mxGeometry height="90" width="220" x="1028" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="o_about" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="About 关于医生/诊所" vertex="1">
+          <mxGeometry height="90" width="200" x="1248" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="o_cta" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="转化动作 CTA&#xa;tel:(929)399-3134&#xa;Google Maps 导航&#xa;阅读完成/了解服务" vertex="1">
+          <mxGeometry height="90" width="320" x="620" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="o_footer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="SiteFooter 页脚&#xa;Quick Links + 地图 + 3 地址" vertex="1">
+          <mxGeometry height="70" width="280" x="640" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="o_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="结束&#xa;完成一次有效访问/转化" vertex="1">
+          <mxGeometry height="70" width="200" x="680" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="oe1" edge="1" parent="1" source="o_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_nav">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe2" edge="1" parent="1" source="o_nav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_home">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe3" edge="1" parent="1" source="o_home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_intent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe4" edge="1" parent="1" source="o_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_services" value="了解治疗">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe5" edge="1" parent="1" source="o_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_blog" value="阅读科普">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe6" edge="1" parent="1" source="o_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_contact" value="联系诊所">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe7" edge="1" parent="1" source="o_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_forms" value="下载表单">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe8" edge="1" parent="1" source="o_intent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_about" value="了解医生">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe9" edge="1" parent="1" source="o_services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_cta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe11" edge="1" parent="1" source="o_contact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_cta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe13" edge="1" parent="1" source="o_about" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_cta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe14" edge="1" parent="1" source="o_cta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_footer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe15" edge="1" parent="1" source="o_footer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="o_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=8;" value="说明：这是官网最核心的业务闭环——&#xa;吸引访问 → 信息获取 → 行动转化（电话/导航/阅读）" vertex="1">
+          <mxGeometry height="80" width="360" x="80" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2-Blog阅读业务闭环" id="hsWz5fIpGE5k_rh_jmd5">
+    <mxGraphModel dx="1300" dy="897" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b_start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" value="开始&#xa;用户进入 /blog" vertex="1">
+          <mxGeometry height="60" width="180" x="740" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_mount" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="BlogView.onMounted&#xa;loadPosts({ preferCache: true })" vertex="1">
+          <mxGeometry height="60" width="260" x="700" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="b_cache" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="有分页缓存?&#xa;getListPageCache(siteId, page)" vertex="1">
+          <mxGeometry height="100" width="220" x="720" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="b_show_cache" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="立即展示缓存卡片&#xa;posts + totalItems" vertex="1">
+          <mxGeometry height="70" width="220" x="725" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-2" edge="1" parent="1" source="b_silent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="b_list_ui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_silent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="后台静默刷新&#xa;loadPosts({ silent: true })" vertex="1">
+          <mxGeometry height="60" width="220" x="725" y="471" as="geometry" />
+        </mxCell>
+        <mxCell id="b_fetch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="fetchBlogPosts&#xa;GET /api/blog/sites/msmpcny/posts&#xa;page=1..N, pageSize=9" vertex="1">
+          <mxGeometry height="80" width="280" x="1020" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="b_map" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="mapPostToCardSync&#xa;文字/日期/摘要先渲染" vertex="1">
+          <mxGeometry height="60" width="240" x="1040" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="b_store" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="写入缓存&#xa;cachePosts + setListPageCache" vertex="1">
+          <mxGeometry height="60" width="240" x="1040" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="b_enrich" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="enrichListCardImages&#xa;后台补全封面图 URL" vertex="1">
+          <mxGeometry height="60" width="240" x="1040" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="b_list_ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="列表展示 9 张卡片&#xa;分页 / 滑动翻页" vertex="1">
+          <mxGeometry height="70" width="260" x="705" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-3" edge="1" parent="1" source="b_page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="b_mount">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-4" connectable="0" parent="9G9FEHS1DWDW_q5JZ9zX-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="是" vertex="1">
+          <mxGeometry relative="1" x="-0.4006" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-5" edge="1" parent="1" source="b_page" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="b_click">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-6" connectable="0" parent="9G9FEHS1DWDW_q5JZ9zX-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="否：点文章" vertex="1">
+          <mxGeometry relative="1" x="-0.2425" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_page" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="翻页?" vertex="1">
+          <mxGeometry height="80" width="140" x="490" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-7" edge="1" parent="1" source="b_click" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="b_route">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_click" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="点击 Read article details" vertex="1">
+          <mxGeometry height="50" width="220" x="581" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="b_route" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="路由跳转&#xa;/blog/:postId?site=msmpcny" vertex="1">
+          <mxGeometry height="60" width="220" x="1040" y="616" as="geometry" />
+        </mxCell>
+        <mxCell id="b_post_cache" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="getCachedPost 有缓存?" vertex="1">
+          <mxGeometry height="90" width="260" x="1020" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="b_instant" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="立即渲染正文&#xa;isLoading = false" vertex="1">
+          <mxGeometry height="60" width="200" x="581" y="821" as="geometry" />
+        </mxCell>
+        <mxCell id="b_find" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="findBlogPostById&#xa;分页扫描全站 posts" vertex="1">
+          <mxGeometry height="60" width="220" x="1360" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="b_hydrate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="postNeedsImageHydration?&#xa;→ hydratePostImages 后台补图" vertex="1">
+          <mxGeometry height="70" width="300" x="1010" y="868" as="geometry" />
+        </mxCell>
+        <mxCell id="b_detail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="BlogDetailView 展示&#xa;标题 + 摘要 + sections 正文/图片" vertex="1">
+          <mxGeometry height="70" width="300" x="1010" y="974" as="geometry" />
+        </mxCell>
+        <mxCell id="b_back" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Back to blog&#xa;KeepAlive 保留 BlogView 状态" vertex="1">
+          <mxGeometry height="60" width="300" x="1010" y="1075" as="geometry" />
+        </mxCell>
+        <mxCell id="b_end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" value="闭环完成&#xa;阅读 → 返回 → 继续浏览/转化" vertex="1">
+          <mxGeometry height="70" width="220" x="1050" y="1176" as="geometry" />
+        </mxCell>
+        <mxCell id="b_api" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;" value="AIHostHub API&#xa;dev: Vite /api 代理&#xa;prod: aihosthub.aihnet.com" vertex="1">
+          <mxGeometry height="100" width="200" x="1360" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="be1" edge="1" parent="1" source="b_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_mount">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be2" edge="1" parent="1" source="b_mount" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be3" edge="1" parent="1" source="b_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_show_cache" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be4" edge="1" parent="1" source="b_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_fetch" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be5" edge="1" parent="1" source="b_show_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_silent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be6" edge="1" parent="1" source="b_fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_map">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be7" edge="1" parent="1" source="b_map" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_store">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be8" edge="1" parent="1" source="b_store" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_enrich">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be10" edge="1" parent="1" source="b_enrich" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_list_ui">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be15" edge="1" parent="1" source="b_route" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_post_cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be17" edge="1" parent="1" source="b_post_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_find" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be18" edge="1" parent="1" source="b_instant" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="b_hydrate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be19" edge="1" parent="1" source="b_find" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_hydrate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="be20" edge="1" parent="1" source="b_hydrate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be21" edge="1" parent="1" source="b_detail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be22" edge="1" parent="1" source="b_back" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="b_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be23" edge="1" parent="1" source="b_fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="b_api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="be24" edge="1" parent="1" source="b_enrich" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="b_api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=8;" value="Blog 是本项目唯一动态数据闭环&#xa;核心优化：文字先显 + 三层缓存 + KeepAlive" vertex="1">
+          <mxGeometry height="70" width="320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-8" edge="1" parent="1" source="b_post_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="b_instant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9G9FEHS1DWDW_q5JZ9zX-9" connectable="0" parent="9G9FEHS1DWDW_q5JZ9zX-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="是" vertex="1">
+          <mxGeometry relative="1" x="-0.1305" y="4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3-技术架构与模块关系" id="HJjquObHlJjJzmLUBxrd">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="用户浏览器" vertex="1">
+          <mxGeometry height="80" width="40" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="t_app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="App.vue&#xa;KeepAlive(BlogView)" vertex="1">
+          <mxGeometry height="70" width="180" x="180" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="t_router" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Vue Router&#xa;12 条路由" vertex="1">
+          <mxGeometry height="70" width="160" x="420" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pages" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="页面 Views&#xa;Home / Services×6 / About&#xa;Contact / Blog / Forms" vertex="1">
+          <mxGeometry height="100" width="240" x="640" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_shared" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="共享组件&#xa;NavBar / SiteFooter&#xa;ContactMap / LocationMap&#xa;ResponsivePublicPicture" vertex="1">
+          <mxGeometry height="100" width="240" x="640" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="t_blog_layer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Blog 业务层&#xa;blogApi.ts&#xa;blogUtils.ts&#xa;useBlogCarouselSwipe.ts" vertex="1">
+          <mxGeometry height="100" width="220" x="960" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vite" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="Vite Dev Server&#xa;proxy /api → aihosthub" vertex="1">
+          <mxGeometry height="70" width="200" x="1240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="t_api" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="AIHostHub Blog API&#xa;posts / images" vertex="1">
+          <mxGeometry height="90" width="200" x="1240" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="t_static" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=8;" value="静态资源&#xa;public/images (WebP+srcset)&#xa;public/videos" vertex="1">
+          <mxGeometry height="80" width="240" x="640" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="clinicLocation.ts&#xa;诊所坐标/导航 URL" vertex="1">
+          <mxGeometry height="60" width="220" x="960" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="te1" edge="1" parent="1" source="t_user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te2" edge="1" parent="1" source="t_app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te3" edge="1" parent="1" source="t_router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_pages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te4" edge="1" parent="1" source="t_pages" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te5" edge="1" parent="1" source="t_pages" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_blog_layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te6" edge="1" parent="1" source="t_blog_layer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="t_vite">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te7" edge="1" parent="1" source="t_vite" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="t_api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te8" edge="1" parent="1" source="t_blog_layer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="t_api">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1180" y="385" as="sourcePoint" />
+            <mxPoint x="1240" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="te9" edge="1" parent="1" source="t_pages" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="t_static">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te10" edge="1" parent="1" source="t_shared" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="t_config">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_legend" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontStyle=2" value="实线 = 运行时调用&#xa;虚线 = 开发代理 / 静态依赖" vertex="1">
+          <mxGeometry height="40" width="260" x="60" y="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
