@@ -141,6 +141,50 @@
                 </div>
               </div>
             </article>
+
+            <article class="office-panel">
+              <div class="contact-map-wrap" aria-label="Dallas office map">
+                <ContactMap
+                  class="contact-map-inner"
+                  :address="dfwOffice.address"
+                  :lat="dfwOffice.lat"
+                  :lng="dfwOffice.lng"
+                  :zoom="16"
+                />
+              </div>
+
+              <div class="office-content">
+                <div class="contact-grid">
+                  <div class="contact-col contact-address">
+                    <div class="address-line address-heading">Dallas Office</div>
+                    <div class="address-line">1140 Empire Central Pl, #106H</div>
+                    <div class="address-line">Dallas, TX</div>
+                    <div class="address-line address-spacer">
+                      <a class="email-link" href="mailto:Dfw@spineandneurosurgery.com">Dfw@spineandneurosurgery.com</a>
+                    </div>
+                    <div class="address-line">(214) 884-6963</div>
+                  </div>
+
+                  <div class="contact-col contact-hours">
+                    <h3 class="col-heading">Business Hours</h3>
+                    <div class="hours-row">
+                      <span class="hours-day">Monday - Friday</span>
+                      <span class="hours-time">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="hours-day">Saturday - Sunday</span>
+                      <span class="hours-time">By appointment only</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-col contact-action">
+                    <a class="directions-button" :href="dfwOffice.directionsUrl" target="_blank" rel="noopener noreferrer">
+                      Get Directions
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -155,6 +199,9 @@ import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
 import ContactMap from '../../components/ContactMap.vue'
 import {
+  DFW_CLINIC_ADDRESS,
+  DFW_CLINIC_LAT,
+  DFW_CLINIC_LNG,
   NYC_CLINIC_ADDRESS,
   NYC_CLINIC_LAT,
   NYC_CLINIC_LNG,
@@ -186,6 +233,13 @@ const syracuseSuiteOffice = {
   lng: SYRACUSE_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(syracuseSuiteOfficeAddress),
 }
+
+const dfwOffice = {
+  address: DFW_CLINIC_ADDRESS,
+  lat: DFW_CLINIC_LAT,
+  lng: DFW_CLINIC_LNG,
+  directionsUrl: googleMapsSearchUrl(DFW_CLINIC_ADDRESS),
+}
 </script>
 
 <style scoped>
@@ -209,7 +263,7 @@ const syracuseSuiteOffice = {
 
 .offices-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
   align-items: stretch;
 }

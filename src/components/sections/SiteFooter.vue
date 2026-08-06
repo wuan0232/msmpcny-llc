@@ -51,6 +51,12 @@
               <div>Syracuse, NY 13210</div>
               <div>(929) 399-3134</div>
             </div>
+            <div class="footer-address footer-address-right">
+              <div class="footer-address-title">Dallas Office</div>
+              <div>1140 Empire Central Pl, #106H</div>
+              <div>Dallas, TX</div>
+              <div>(214) 884-6963</div>
+            </div>
           </div>
 
           <img
@@ -199,7 +205,7 @@ const directionsUrl = googleMapsDirectionsUrl()
 
 .footer-contact-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 20px;
   align-items: start;
   margin-bottom: 16px;
