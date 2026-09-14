@@ -46,9 +46,15 @@ export interface BlogListPost {
   id: string
   siteId: string
   title: string
+  slug?: string
+  publicPath?: string
   excerpt?: string
+  metaTitle?: string | null
+  metaDescription?: string | null
+  authorName?: string | null
   sections?: BlogSection[]
   createdAt?: string
+  updatedAt?: string
 }
 
 export interface BlogPostsResponse {
@@ -69,6 +75,7 @@ export function cachePosts(siteId: string, posts: BlogListPost[]) {
   const siteCache = postCacheBySite.get(siteId) ?? new Map<string, BlogListPost>()
   for (const post of posts) {
     siteCache.set(post.id, post)
+    if (post.slug) siteCache.set(post.slug, post)
   }
   postCacheBySite.set(siteId, siteCache)
 }
@@ -105,7 +112,7 @@ export async function findBlogPostById(
   while ((page - 1) * pageSize < total) {
     if (signal?.aborted) return null
     const result = await fetchBlogPosts(siteId, page, pageSize, signal)
-    const matched = result.items.find((item) => item.id === postId)
+    const matched = result.items.find((item) => item.id === postId || item.slug === postId)
     if (matched) return matched
     total = result.total
     page += 1
@@ -140,7 +147,11 @@ export function extractFirstImageRef(post: BlogListPost): BlogImageRef | null {
   for (const section of post.sections ?? []) {
     for (const paragraph of section.paragraphs ?? []) {
       if (paragraph.image?.url || paragraph.image?.id) {
-        return paragraph.image
+        const image = paragraph.image
+        return {
+          ...image,
+          url: image.url?.replace(/^http:\/\/aihosthub\.aihnet\.com\//i, 'https://aihosthub.aihnet.com/'),
+        }
       }
     }
   }

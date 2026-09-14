@@ -15,6 +15,7 @@
           <article v-else-if="post" class="detail-card">
             <p class="detail-date">{{ formatBlogDate(post.createdAt ?? '', 'detail') }}</p>
             <h1 class="detail-title">{{ post.title }}</h1>
+            <p v-if="post.authorName" class="detail-byline">By {{ post.authorName }}</p>
             <p v-if="post.excerpt" class="detail-excerpt">{{ post.excerpt }}</p>
 
             <section
@@ -35,6 +36,10 @@
                 {{ paragraph }}
               </p>
             </section>
+            <aside class="medical-note" aria-label="Medical information notice">
+              This article is for general educational purposes and does not replace an evaluation or advice from a
+              qualified healthcare professional.
+            </aside>
           </article>
         </div>
       </section>
@@ -45,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import NavBar from '../../components/NavBar.vue'
 import SiteFooter from '../../components/sections/SiteFooter.vue'
@@ -57,6 +62,7 @@ import {
   hydratePostImages,
   postNeedsImageHydration,
 } from './blogUtils'
+import { setSiteSeo, SITE_NAME, SITE_ORIGIN } from '../../utils/siteSeo'
 
 const route = useRoute()
 const post = ref<BlogListPost | null>(null)
@@ -75,9 +81,7 @@ const postId = computed(() => {
 
 const sectionBlocks = computed(() => (post.value ? getPostSectionBlocks(post.value) : []))
 
-onMounted(() => {
-  void loadDetail()
-})
+watch(postId, () => void loadDetail(), { immediate: true })
 
 async function loadDetail() {
   errorMessage.value = ''
@@ -91,10 +95,12 @@ async function loadDetail() {
     if (found) {
       post.value = found
       isLoading.value = false
+      applyPostSeo(found)
       if (postNeedsImageHydration(found)) {
         void hydratePostImages(found, siteId.value).then((hydrated) => {
-          if (postId.value === hydrated.id) {
+          if (postId.value === hydrated.id || postId.value === hydrated.slug) {
             post.value = hydrated
+            applyPostSeo(hydrated)
           }
         })
       }
@@ -113,11 +119,13 @@ async function loadDetail() {
 
     post.value = found
     isLoading.value = false
+    applyPostSeo(found)
 
     if (postNeedsImageHydration(found)) {
       void hydratePostImages(found, siteId.value).then((hydrated) => {
-        if (postId.value === hydrated.id) {
+        if (postId.value === hydrated.id || postId.value === hydrated.slug) {
           post.value = hydrated
+          applyPostSeo(hydrated)
         }
       })
     }
@@ -126,6 +134,33 @@ async function loadDetail() {
     errorMessage.value = error instanceof Error ? error.message : 'Failed to load article.'
     isLoading.value = false
   }
+}
+
+function applyPostSeo(article: BlogListPost) {
+  const routeKey = article.slug || postId.value
+  const path = article.publicPath || `/blog/${encodeURIComponent(routeKey)}`
+  const description = article.metaDescription?.trim() || article.excerpt?.trim() || article.title
+  const image = getPostSectionBlocks(article).find((section) => section.imageUrl)?.imageUrl
+
+  setSiteSeo({
+    title: article.metaTitle?.trim() || article.title,
+    description,
+    path,
+    type: 'article',
+    image,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: article.title,
+      description,
+      url: `${SITE_ORIGIN}${path}`,
+      mainEntityOfPage: `${SITE_ORIGIN}${path}`,
+      datePublished: article.createdAt,
+      dateModified: article.updatedAt || article.createdAt,
+      ...(article.authorName ? { author: { '@type': 'Person', name: article.authorName } } : {}),
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_ORIGIN },
+    },
+  })
 }
 </script>
 
@@ -161,6 +196,22 @@ async function loadDetail() {
   background: #fff;
   border-radius: 12px;
   color: #4b5563;
+}
+
+.detail-byline {
+  margin: -6px 0 20px;
+  color: #5c6570;
+  font-size: 0.95rem;
+}
+
+.medical-note {
+  margin-top: 36px;
+  padding: 16px 18px;
+  border-left: 4px solid #6b7280;
+  background: #f5f7f9;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .detail-state-error {

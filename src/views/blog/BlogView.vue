@@ -61,7 +61,7 @@
 
                     <RouterLink
                       class="blog-card-link"
-                      :to="{ name: 'blog-detail', params: { postId: post.id }, query: { site: activeSiteId } }"
+                      :to="{ name: 'blog-detail', params: { postId: post.routeKey } }"
                     >
                       Read article details
                     </RouterLink>
@@ -144,6 +144,7 @@ import {
   type BlogCardPost,
 } from './blogUtils'
 import { useBlogCarouselSwipe } from './useBlogCarouselSwipe'
+import { setSiteSeo, SITE_NAME, SITE_ORIGIN } from '../../utils/siteSeo'
 
 defineOptions({ name: 'BlogView' })
 
@@ -195,6 +196,18 @@ watch(totalPages, (pages) => {
 })
 
 onMounted(() => {
+  setSiteSeo({
+    title: `${SITE_NAME} Blog`,
+    description: 'Patient education about musculoskeletal medicine, pain management, and non-surgical treatment options.',
+    path: '/blog',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: `${SITE_NAME} Blog`,
+      url: `${SITE_ORIGIN}/blog`,
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_ORIGIN },
+    },
+  })
   void loadPosts({ preferCache: true })
 })
 

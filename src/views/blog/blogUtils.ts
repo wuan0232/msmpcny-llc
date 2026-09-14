@@ -6,6 +6,7 @@ export const BLOG_CARD_CATEGORY = 'Patient education'
 
 export interface BlogCardPost {
   id: string
+  routeKey: string
   title: string
   excerpt: string
   dateIso: string
@@ -77,6 +78,7 @@ export function mapPostToCardSync(post: BlogListPost): BlogCardPost {
 
   return {
     id: post.id,
+    routeKey: post.slug || post.id,
     title: post.title || 'Untitled',
     excerpt: (post.excerpt ?? '').trim() || 'No summary available.',
     dateIso: createdAt,
