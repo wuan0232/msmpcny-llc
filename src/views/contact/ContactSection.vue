@@ -13,8 +13,6 @@
                 <ContactMap
                   class="contact-map-inner"
                   :address="syracuseOffice.address"
-                  :lat="syracuseOffice.lat"
-                  :lng="syracuseOffice.lng"
                   :zoom="15"
                 />
               </div>
@@ -56,8 +54,6 @@
                 <ContactMap
                   class="contact-map-inner"
                   :address="nycOffice.address"
-                  :lat="nycOffice.lat"
-                  :lng="nycOffice.lng"
                   :zoom="16"
                 />
               </div>
@@ -99,8 +95,6 @@
                 <ContactMap
                   class="contact-map-inner"
                   :address="syracuseSuiteOffice.address"
-                  :lat="syracuseSuiteOffice.lat"
-                  :lng="syracuseSuiteOffice.lng"
                   :zoom="16"
                 />
               </div>
@@ -147,8 +141,6 @@
                 <ContactMap
                   class="contact-map-inner"
                   :address="dfwOffice.address"
-                  :lat="dfwOffice.lat"
-                  :lng="dfwOffice.lng"
                   :zoom="16"
                 />
               </div>
@@ -200,28 +192,18 @@ import SiteFooter from '../../components/sections/SiteFooter.vue'
 import ContactMap from '../../components/ContactMap.vue'
 import {
   DFW_CLINIC_ADDRESS,
-  DFW_CLINIC_LAT,
-  DFW_CLINIC_LNG,
   NYC_CLINIC_ADDRESS,
-  NYC_CLINIC_LAT,
-  NYC_CLINIC_LNG,
   SYRACUSE_CLINIC_ADDRESS,
-  SYRACUSE_CLINIC_LAT,
-  SYRACUSE_CLINIC_LNG,
   googleMapsSearchUrl,
 } from '../../config/clinicLocation'
 
 const syracuseOffice = {
   address: SYRACUSE_CLINIC_ADDRESS,
-  lat: SYRACUSE_CLINIC_LAT,
-  lng: SYRACUSE_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(SYRACUSE_CLINIC_ADDRESS),
 }
 
 const nycOffice = {
   address: NYC_CLINIC_ADDRESS,
-  lat: NYC_CLINIC_LAT,
-  lng: NYC_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(NYC_CLINIC_ADDRESS),
 }
 
@@ -229,15 +211,11 @@ const syracuseSuiteOfficeAddress = '475 Irving Ave, Suite 420, Syracuse, NY 1321
 
 const syracuseSuiteOffice = {
   address: syracuseSuiteOfficeAddress,
-  lat: SYRACUSE_CLINIC_LAT,
-  lng: SYRACUSE_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(syracuseSuiteOfficeAddress),
 }
 
 const dfwOffice = {
   address: DFW_CLINIC_ADDRESS,
-  lat: DFW_CLINIC_LAT,
-  lng: DFW_CLINIC_LNG,
   directionsUrl: googleMapsSearchUrl(DFW_CLINIC_ADDRESS),
 }
 </script>

@@ -174,7 +174,7 @@ const directionsUrl = googleMapsDirectionsUrl()
 .map-wrap {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: #ffffff;
-  border-radius: 2px;
+  border-radius: 0;
   overflow: hidden;
   max-width: 255px;
 }
