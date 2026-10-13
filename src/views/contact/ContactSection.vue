@@ -157,8 +157,8 @@
                 <div class="contact-grid">
                   <div class="contact-col contact-address">
                     <div class="address-line address-heading">Dallas Office</div>
-                    <div class="address-line">1140 Empire Central Pl, #106H</div>
-                    <div class="address-line">Dallas, TX</div>
+                    <div class="address-line">1140 Empire Central Pl, Unit 105A</div>
+                    <div class="address-line">Dallas, TX 75247</div>
                     <div class="address-line address-spacer">
                       <a class="email-link" href="mailto:Dfw@spineandneurosurgery.com">Dfw@spineandneurosurgery.com</a>
                     </div>

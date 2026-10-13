@@ -53,8 +53,8 @@
             </div>
             <div class="footer-address footer-address-right">
               <div class="footer-address-title">Dallas Office</div>
-              <div>1140 Empire Central Pl, #106H</div>
-              <div>Dallas, TX</div>
+              <div>1140 Empire Central Pl, Unit 105A</div>
+              <div>Dallas, TX 75247</div>
               <div>(214) 884-6963</div>
             </div>
           </div>
