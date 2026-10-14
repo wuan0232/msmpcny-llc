@@ -24,8 +24,8 @@
                     <div class="address-line">475 Irving Avenue</div>
                     <div class="address-line">Suite 402</div>
                     <div class="address-line">Syracuse, NY 13210</div>
-                    <div class="address-line">315-478-9710</div>
-                    <div class="address-line">315-479-9145 (Fax)</div>
+                    <div class="address-line">Tel (315) 478-9710</div>
+                    <div class="address-line">Fax (315) 479-9145</div>
                   </div>
 
                   <div class="contact-col contact-hours">

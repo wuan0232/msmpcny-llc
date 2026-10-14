@@ -32,12 +32,13 @@
         <div class="footer-col footer-col-contact">
           <div class="footer-contact-row">
             <h3 class="footer-heading footer-heading-contact">Contact Us</h3>
-            <div class="footer-address footer-address-left">
+            <div class="footer-address footer-address-right">
               <div class="footer-address-title">Musculoskeletal Medicine, P.C.</div>
               <div>475 Irving Avenue</div>
               <div>Suite 402</div>
               <div>Syracuse, NY 13210</div>
-              <div>315-478-9710</div>
+              <div>Tel (315) 478-9710</div>
+              <div>Fax (315) 479-9145</div>
             </div>
             <div class="footer-address footer-address-right">
               <div class="footer-address-title">New York City Office</div>
@@ -215,10 +216,6 @@ const directionsUrl = googleMapsDirectionsUrl()
   font-size: 15px;
   line-height: 1.6;
   font-weight: 500;
-}
-
-.footer-address-left {
-  text-align: left;
 }
 
 .footer-address-right {
